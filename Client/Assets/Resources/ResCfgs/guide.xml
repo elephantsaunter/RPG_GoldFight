@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<item ID="1001">
+		<npcID>0</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>0</actID>
+		<coin>65</coin>
+		<exp>80</exp>
+	</item>
+	<item ID="1002">
+		<npcID>1</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>1</actID>
+		<coin>75</coin>
+		<exp>90</exp>
+	</item>
+	<item ID="1003">
+		<npcID>2</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>2</actID>
+		<coin>85</coin>
+		<exp>100</exp>
+	</item>
+	<item ID="1004">
+		<npcID>3</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>3</actID>
+		<coin>95</coin>
+		<exp>110</exp>
+	</item>
+	<item ID="1005">
+		<npcID>-1</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>4</actID>
+		<coin>105</coin>
+		<exp>120</exp>
+	</item>
+	<item ID="1006">
+		<npcID>-1</npcID>
+		<dialogArr>
+			#0|Hi Siri
+			#1|hI
+		</dialogArr>
+		<actID>5</actID>
+		<coin>115</coin>
+		<exp>130</exp>
+	</item>
+</root>

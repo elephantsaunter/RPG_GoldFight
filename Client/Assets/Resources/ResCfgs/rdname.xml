@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<item ID="1">
+		<surname>Wallent</surname>
+		<man>Tom</man>
+		<woman>Jenny</woman>
+	</item>
+	<item ID="2">
+		<surname>Buffet</surname>
+		<man>Mike</man>
+		<woman>Christina</woman>
+	</item>
+	<item ID="3">
+		<surname>Bush</surname>
+		<man>John</man>
+		<woman>Cherry</woman>
+	</item>
+	<item ID="4">
+		<surname>Lausen</surname>
+		<man>Tim</man>
+		<woman>Lily</woman>
+	</item>
+</root>

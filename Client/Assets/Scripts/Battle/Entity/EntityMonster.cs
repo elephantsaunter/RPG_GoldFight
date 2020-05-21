@@ -1,0 +1,101 @@
+﻿using PENet;
+using UnityEngine;
+
+public class EntityMonster: EntityBase {
+    public EntityMonster() {
+        entityType = EntityType.Monster;
+    }
+    public MonsterData md;
+
+    private float checkTime = 2; // Timespace is 2s ,monster every 2s do a search
+    private float checkCountTime = 0; // check timer
+
+    private float atkTime = 2;
+    private float atkCountTime = 0;
+
+    public override void SetBattleProps (BattleProps props) {
+        int level = md.mLevel;
+
+        BattleProps p = new BattleProps {
+            hp = props.hp * level,
+            ad = props.ad * level,
+            ap = props.ap * level,
+            addef = props.addef * level,
+            apdef = props.apdef * level,
+            dodge = props.dodge * level,
+            pierce = props.pierce * level,
+            critical = props.critical * level
+        };
+
+        Props = p;
+        HP = p.hp;
+    }
+    bool runAI = true;
+    public override void TickAILogic () {
+        if (!runAI) {
+            return;
+        }
+        if (currentAniState == AniState.Idle || currentAniState == AniState.Move) {
+            float delta = Time.deltaTime;
+            checkCountTime += delta;
+            if (checkCountTime < checkTime) {
+                return;
+            } else {
+                // calc target direction
+                Vector2 dir = CalcTargetDir();
+                // check target if in attack range
+                if (!InAtkRange()) {
+                    // not in range, set move direction
+                    SetDir(dir);
+                    Move();
+                } else {
+                    // in range: stop move, do attack
+                    SetDir(Vector2.zero);
+                    atkCountTime += checkCountTime;
+                    if (atkCountTime > atkTime) {
+                        // its time, do attack
+                        SetAtkRotation(dir);
+                        Attack(md.mCfg.skillID);
+                        atkCountTime = 0;
+                    } else {
+                        // not time, Idle wait
+                        Idle();
+                    }
+                }
+                checkCountTime = 0;
+                checkTime = PETools.RDInt(1, 5) * 1.0f / 10;
+            }
+        };
+    }
+
+    public override Vector2 CalcTargetDir () {
+        EntityPlayer entityPlayer = battleMgr.entitySelfPlayer;
+        if (entityPlayer == null || entityPlayer.currentAniState == AniState.Die) {
+            runAI = false;
+            return Vector2.zero;
+        } else {
+            Vector3 target = entityPlayer.GetPos();
+            Vector3 self = GetPos();
+            return new Vector2(target.x - self.x, target.z - self.z).normalized;
+        }
+    }
+    private bool InAtkRange () {
+        EntityPlayer entityPlayer = battleMgr.entitySelfPlayer;
+        if (entityPlayer == null || entityPlayer.currentAniState == AniState.Die) {
+            runAI = false;
+            return false;
+        } else {
+            Vector3 target = entityPlayer.GetPos();
+            Vector3 self = GetPos();
+            target.y = 0;
+            self.y = 0;
+            float dis = Vector3.Distance(target, self);
+            if (dis <= md.mCfg.aktDis) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+}
