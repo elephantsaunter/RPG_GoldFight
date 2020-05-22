@@ -51,6 +51,10 @@ public abstract class EntityBase {
     public Queue<int> comboQue = new Queue<int>();
     public int nextSkillID = 0;
     public SkillCfg curtSkillCfg;
+    // skill move CallBack ID
+    public List<int> skMoveCBLst = new List<int>();
+    // skill hurt calc callback ID
+    public List<int> skActionLst = new List<int>();
     public void Born () {
         stateMgr.ChangeStatus(this, AniState.Born, null);
     }
@@ -183,5 +187,19 @@ public abstract class EntityBase {
             }
         }
         SetAction(Constants.ActionDefault);
+    }
+
+    public void RmvMoveCB(int tid) {
+        int index = -1;
+        for(int i = 0;i <skMoveCBLst.Count; i++) {
+            if (skMoveCBLst[i] == tid) {
+                // taget is found
+                index = i;
+                break;
+            }
+        }
+        if(index!=1) {
+            skMoveCBLst.RemoveAt(index);
+        }
     }
 }

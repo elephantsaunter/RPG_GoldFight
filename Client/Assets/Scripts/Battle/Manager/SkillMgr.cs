@@ -180,16 +180,20 @@ public class SkillMgr:MonoBehaviour {
             float speed = skillMoveCfg.moveDis / (skillMoveCfg.moveTime / 1000f);
             sumTime += skillMoveCfg.delayTime;
             if (sumTime > 0) {
-                timerSvc.AddTimerTask((int tid) => {
+                int moveid = timerSvc.AddTimerTask((int tid) => {
                     entity.SetSkillMoveState(true, speed);
+                    entity.RmvMoveCB(tid);
                 }, sumTime);
+                entity.skMoveCBLst.Add(moveid);
             } else {
                 entity.SetSkillMoveState(true, speed);
             }
             sumTime += skillMoveCfg.moveTime;
-            timerSvc.AddTimerTask((int tid) => {
+            int stopid = timerSvc.AddTimerTask((int tid) => {
                 entity.SetSkillMoveState(false);
+                entity.RmvMoveCB(tid);
             }, sumTime);
+            entity.skMoveCBLst.Add(stopid);
         }
     }
 }
