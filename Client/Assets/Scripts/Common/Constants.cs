@@ -18,10 +18,14 @@ public enum EntityType {
     Player,
     Monster
 }
-
 public enum EntityState {
     None,
     ControlledState, // be attacked, cannot be controlled, but can be hurted
+}
+public enum MonsterType {
+    None,
+    Normal=1,
+    Boss=2
 }
 public class Constants {
     private const string ColorRed = "<color=#FF0000FF>";

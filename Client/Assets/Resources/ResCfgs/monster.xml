@@ -2,6 +2,8 @@
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<item ID="1001">
 		<mName>normal</mName>
+    <mType>1</mType>
+    <isStop>1</isStop>
 		<resPath>PrefabNPC/MonsterSoldier_1</resPath>
     <skillID>201</skillID>
     <atkDis>2</atkDis>
@@ -16,7 +18,9 @@
 	</item>
 	<item ID="2001">
 		<mName>boss</mName>
-		<resPath>PrefabNPC/MonsterBoss_1</resPath>
+    <mType>2</mType>
+    <isStop>0</isStop>
+    <resPath>PrefabNPC/MonsterBoss_1</resPath>
     <skillID>301</skillID>
     <atkDis>4.5</atkDis>
 		<hp>80000</hp>

@@ -108,7 +108,7 @@ public class SkillMgr:MonoBehaviour {
             // other dmgType
         }
 
-        // final danage
+        // final damage
         if(dmgSum < 0) {
             dmgSum = 0;
             return;
@@ -122,7 +122,8 @@ public class SkillMgr:MonoBehaviour {
         }
         else {
             target.HP -= dmgSum;
-            if(target.entityState != EntityState.ControlledState) {
+            if(target.entityState == EntityState.None && target.GetBreakState()) {
+                // state which not be controlled AND can be interrupted
                 target.Hit();
             }
         }

@@ -170,6 +170,9 @@ public abstract class EntityBase {
     public AudioSource GetAudio() {
         return controller.GetComponent<AudioSource>();
     }
+    public virtual bool GetBreakState() {
+        return true;
+    }
     public virtual Vector2 CalcTargetDir() {
         return Vector2.zero;
     }

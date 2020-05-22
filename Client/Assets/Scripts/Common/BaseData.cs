@@ -14,6 +14,8 @@ public class MonsterData: BaseData<MonsterData> {
 }
 public class MonsterCfg: BaseData<MonsterCfg> {
     public string mName;
+    public MonsterType mType; // 1,normal; 2,boss
+    public bool isStop; // whther it can be interrupt by being beaten
     public string resPath;
     public int skillID;
     public float aktDis;

@@ -268,6 +268,16 @@ public class ResSvc: MonoBehaviour {
                         case "mName":
                             mc.mName = e.InnerText;
                             break;
+                        case "mType":
+                            if(e.InnerText.Equals("1")) {
+                                mc.mType = MonsterType.Normal;
+                            } else if (e.InnerText.Equals("2")) {
+                                mc.mType = MonsterType.Boss;
+                            }
+                            break;
+                        case "isStop":
+                            mc.isStop = int.Parse(e.InnerText) == 1;
+                            break;
                         case "resPath":
                             mc.resPath = e.InnerText;
                             break;
