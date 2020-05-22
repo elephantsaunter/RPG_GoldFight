@@ -3,6 +3,7 @@ using UnityEngine;
 public class MapMgr: MonoBehaviour {
     private int waveIndex = 1; // default to generate first wave
     private BattleMgr battleMgr;
+    public TriggerData[] triggerArr;
     public void Init(BattleMgr battle) {
         this.battleMgr = battle;
         // init first wave monster
@@ -15,6 +16,18 @@ public class MapMgr: MonoBehaviour {
             co.isTrigger = false;
             battleMgr.LoadMonsterByWaveID(waveIndex);
             battleMgr.ActiveCurrrentBatchMonster();
+            battleMgr.triggerCheck = true;
         }
+    }
+    public bool SetNextTriggerOn() {
+        waveIndex += 1;
+        for(int i = 0; i < triggerArr.Length; i++) {
+            if(triggerArr[i].triggerWave == waveIndex) {
+                BoxCollider co = triggerArr[i].GetComponent<BoxCollider>();
+                co.isTrigger = true;
+                return true;
+            }
+        }
+        return false;
     }
 }

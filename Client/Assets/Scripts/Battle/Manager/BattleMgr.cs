@@ -42,11 +42,22 @@ public class BattleMgr: MonoBehaviour {
             audioSvc.PlayBGMusic(Constants.BGLeipzig);
         });
     }
-
+    public bool triggerCheck = true;
     public void Update() {
         foreach(var item in monsterDic) {
             EntityMonster em = item.Value;
             em.TickAILogic();
+        }
+        // check this wave whether monster all dead
+        if(mapCfg != null) {
+            if(triggerCheck && monsterDic.Count == 0) {
+                //bool isExist = mapMgr.SetNextTriggerOn();
+                triggerCheck = false;
+                //if(!isExist) {
+                    // all waves were completed, mission sucess
+                    // TODO reward calc
+                //}
+            }
         }
     }
     private void LoadPlayer(MapCfg mapCfg) {

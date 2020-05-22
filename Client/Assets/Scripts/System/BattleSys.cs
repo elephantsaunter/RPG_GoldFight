@@ -25,7 +25,7 @@ public class BattleSys: SystemRoot {
     }
 
     public void SetPlayerCtrlWndState(bool isActive = true) {
-        playerCtrlWnd.SetWndState(true);
+        playerCtrlWnd.SetWndState(isActive);
     }
 
     public void SetMoveDir (Vector2 dir) {
