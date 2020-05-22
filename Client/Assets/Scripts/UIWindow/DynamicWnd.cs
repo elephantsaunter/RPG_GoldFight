@@ -45,7 +45,7 @@ public class DynamicWnd : WindowRoot {
 
         AnimationClip clip = tipsAni.GetClip("TipsShowAni");
         tipsAni.Play();
-        //延时关闭激活状态
+        //Delayed close activated status
 
         StartCoroutine(AniPlayDone(clip.length, () => {
             SetActive(txtTips, false);
