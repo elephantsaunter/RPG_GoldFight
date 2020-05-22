@@ -47,12 +47,12 @@ public abstract class Controller: MonoBehaviour {
         skillMove = move;
         skillMoveSpeed = skillSpeed;
     }
-    public virtual void SetAktRotationLocal (Vector2 atkDir) {
+    public virtual void SetatkRotationLocal (Vector2 atkDir) {
         float angle = Vector2.SignedAngle(atkDir, new Vector2(0, 1));
         Vector3 eulerAngles = new Vector3(0, angle, 0);
         transform.localEulerAngles = eulerAngles;
     }
-    public virtual void SetAktRotationCam(Vector2 camDir) {
+    public virtual void SetatkRotationCam(Vector2 camDir) {
         float angle = Vector2.SignedAngle(camDir, new Vector2(0, 1)) + camTrans.eulerAngles.y;
         Vector3 eulerAngles = new Vector3(0, angle, 0);
         transform.localEulerAngles = eulerAngles;

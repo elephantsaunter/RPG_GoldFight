@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using PEProtocol;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,7 +67,7 @@ public class BattleMgr: MonoBehaviour {
             critical = pd.critical,
         };
 
-        entitySelfPlayer = new EntityPlayer() {
+        entitySelfPlayer = new EntityPlayer {
             battleMgr = this,
             stateMgr = stateMgr,
             skillMgr = skillMgr
@@ -142,11 +141,13 @@ public class BattleMgr: MonoBehaviour {
         if(entitySelfPlayer.canControl == false) {
             return;
         }
-        if(dir ==  Vector2.zero) {
-            entitySelfPlayer.Idle();
-        } else {
-            entitySelfPlayer.Move();
-            entitySelfPlayer.SetDir(dir);
+        if(entitySelfPlayer.currentAniState == AniState.Idle || entitySelfPlayer.currentAniState == AniState.Move) {
+            if(dir ==  Vector2.zero) {
+                entitySelfPlayer.Idle();
+            } else {
+                entitySelfPlayer.Move();
+                entitySelfPlayer.SetDir(dir);
+            }
         }
     }
     public void ReqReleaseSkill(int index) {

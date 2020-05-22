@@ -173,7 +173,8 @@ public class SkillMgr:MonoBehaviour {
         if(!skillCfg.isBreak) {
             entity.entityState = EntityState.ControlledState;
         }
-        timerSvc.AddTimerTask((int tid) => {
+
+        entity.skEndCB = timerSvc.AddTimerTask((int tid) => {
             entity.Idle();
         }, skillCfg.skillTime);
     }

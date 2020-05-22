@@ -18,7 +18,7 @@ public class MonsterCfg: BaseData<MonsterCfg> {
     public bool isStop; // whther it can be interrupt by being beaten
     public string resPath;
     public int skillID;
-    public float aktDis;
+    public float atkDis;
     public BattleProps bps;
 }
 public class SkillMoveCfg: BaseData<SkillMoveCfg> {

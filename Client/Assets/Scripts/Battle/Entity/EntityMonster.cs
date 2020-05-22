@@ -1,5 +1,4 @@
-﻿using PENet;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EntityMonster: EntityBase {
     public EntityMonster() {
@@ -65,7 +64,7 @@ public class EntityMonster: EntityBase {
                 checkCountTime = 0;
                 checkTime = PETools.RDInt(1, 5) * 1.0f / 10;
             }
-        };
+        }
     }
 
     public override Vector2 CalcTargetDir () {
@@ -90,7 +89,7 @@ public class EntityMonster: EntityBase {
             target.y = 0;
             self.y = 0;
             float dis = Vector3.Distance(target, self);
-            if (dis <= md.mCfg.aktDis) {
+            if (dis <= md.mCfg.atkDis) {
                 return true;
             } else {
                 return false;

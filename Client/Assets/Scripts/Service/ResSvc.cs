@@ -285,7 +285,7 @@ public class ResSvc: MonoBehaviour {
                             mc.skillID = int.Parse(e.InnerText);
                             break;
                         case "atkDis":
-                            mc.aktDis = float.Parse(e.InnerText);
+                            mc.atkDis = float.Parse(e.InnerText);
                             break;
                         case "hp":
                             mc.bps.hp = int.Parse(e.InnerText);

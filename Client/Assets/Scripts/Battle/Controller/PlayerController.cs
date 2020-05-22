@@ -21,10 +21,10 @@ public class PlayerController: Controller {
         if(daggerskill1fx != null) {
             fxDic.Add(daggerskill1fx.name, daggerskill1fx);
         }
-        if (daggerskill2fx != null) {
+        if (daggeratk2fx != null) {
             fxDic.Add(daggerskill2fx.name, daggerskill2fx);
         }
-        if (daggerskill3fx != null) {
+        if (daggeratk3fx != null) {
             fxDic.Add(daggerskill3fx.name, daggerskill3fx);
         }
         if (daggeratk1fx != null) {

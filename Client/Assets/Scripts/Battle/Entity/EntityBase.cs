@@ -55,6 +55,7 @@ public abstract class EntityBase {
     public List<int> skMoveCBLst = new List<int>();
     // skill hurt calc callback ID
     public List<int> skActionCBLst = new List<int>();
+    public int skEndCB = -1;
     public void Born () {
         stateMgr.ChangeStatus(this, AniState.Born, null);
     }
@@ -119,10 +120,10 @@ public abstract class EntityBase {
     public virtual void SetAtkRotation(Vector2 dir,bool offset=false) {
         if(controller != null) {
             if(offset) {
-                controller.SetAktRotationCam(dir);
+                controller.SetatkRotationCam(dir);
             }
             else {
-                controller.SetAktRotationLocal(dir);
+                controller.SetatkRotationLocal(dir);
             }
         }
     }
@@ -150,7 +151,6 @@ public abstract class EntityBase {
     #endregion
     public virtual void SkillAttack(int skillID) {
         skillMgr.SkillAttack(this, skillID);
-        skillMgr.AttackDamage(this, skillID);
     }
     public virtual Vector2 GetDirInput() {
         return Vector2.zero;
@@ -178,16 +178,19 @@ public abstract class EntityBase {
     }
     public void ExitCurtSkill () {
         canControl = true;
-        if(!curtSkillCfg.isBreak) {
-            entityState = EntityState.None;
-        }
-        if(curtSkillCfg.isCombo) {
-            // check whether continous
-            if (comboQue.Count > 0) {
-                nextSkillID = comboQue.Dequeue();
-            } else {
-                nextSkillID = 0;
+        if(curtSkillCfg != null) {
+            if(!curtSkillCfg.isBreak) {
+                entityState = EntityState.None;
             }
+            if(curtSkillCfg.isCombo) {
+                // check whether continous
+                if (comboQue.Count > 0) {
+                    nextSkillID = comboQue.Dequeue();
+                } else {
+                    nextSkillID = 0;
+                }
+            }
+            curtSkillCfg = null;
         }
         SetAction(Constants.ActionDefault);
     }
@@ -200,7 +203,7 @@ public abstract class EntityBase {
                 break;
             }
         }
-        if (index != 1) {
+        if (index != -1) {
             skActionCBLst.RemoveAt(index);
         }
     }

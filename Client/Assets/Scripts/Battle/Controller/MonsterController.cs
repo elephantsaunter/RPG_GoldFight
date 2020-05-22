@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class MonsterController: Controller {
-    public void Update () {
+    private void Update () {
         // AI logic
         if (isMove) {
             SetDir();
