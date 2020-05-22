@@ -224,7 +224,7 @@ public class PlayerCtrlWnd : WindowRoot {
         BattleSys.Instance.ReqReleaseSkill(0);
     }
     public void ClickSkill1 () {
-        if(isSk1CD==false) {
+        if(isSk1CD==false && GetCanRisSkill()) {
             BattleSys.Instance.ReqReleaseSkill(1);
             isSk1CD = true;
             SetActive(imgSk1CD);
@@ -235,7 +235,7 @@ public class PlayerCtrlWnd : WindowRoot {
     }
 
     public void ClickSkill2 () {
-        if (isSk2CD == false) {
+        if (isSk2CD == false && GetCanRisSkill()) {
             BattleSys.Instance.ReqReleaseSkill(2);
             isSk2CD = true;
             SetActive(imgSk2CD);
@@ -246,7 +246,7 @@ public class PlayerCtrlWnd : WindowRoot {
     }
 
     public void ClickSkill3 () {
-        if (isSk3CD == false) {
+        if (isSk3CD == false && GetCanRisSkill()) {
             BattleSys.Instance.ReqReleaseSkill(3);
             isSk3CD = true;
             SetActive(imgSk3CD);
@@ -262,5 +262,9 @@ public class PlayerCtrlWnd : WindowRoot {
     public void SetSelfHPVal(int val) {
         SetText(txtSelfHP, val + "/" + HPSum);
         imgSelfHP.fillAmount = val * 1.0f / HPSum;
+    }
+
+    public bool GetCanRisSkill() {
+        return BattleSys.Instance.battleMgr.CanRisSkill();
     }
 }

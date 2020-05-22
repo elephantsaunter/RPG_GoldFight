@@ -45,4 +45,10 @@ public class EntityPlayer: EntityBase {
         }
         return targetMonster;
     }
+    public override void SetHPVal(int oldVal, int newVal) {
+        BattleSys.Instance.playerCtrlWnd.SetSelfHPVal(newVal);
+    }
+    public override void SetDodge() {
+        GameRoot.Instance.dynamicWnd.SetSelfDodge();
+    }
 }

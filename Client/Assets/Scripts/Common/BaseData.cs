@@ -36,6 +36,8 @@ public class SkillCfg: BaseData<SkillCfg> {
     public int aniAction;
     public string fx;
     public bool isCombo;
+    public bool isCollide;
+    public bool isBreak;
     public DamageType dmgType;
     public List<int> skillMoveLst;
     public List<int> skillActionLst;

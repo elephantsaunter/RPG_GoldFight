@@ -26,4 +26,9 @@ public class AudioSvc: MonoBehaviour {
         uiAudio.clip = audio;
         uiAudio.Play();
     }
+    public void PlayCharAudio (string name, AudioSource audioSrc) {
+        AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/" + name, true);
+        audioSrc.clip = audio;
+        audioSrc.Play();
+    }
 }

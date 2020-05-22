@@ -612,11 +612,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227083022}
---- !u!111 &308607975 stripped
-Animation:
-  m_PrefabParentObject: {fileID: 111588026869882834, guid: 4a7886eb9f9937642b4c7d4dc2212dd7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1479352688}
 --- !u!224 &392033089 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224223311585072566, guid: c5d32a82318aee843b129bc9d43b588a,
@@ -2234,15 +2229,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114919537363395452, guid: 4a7886eb9f9937642b4c7d4dc2212dd7,
-        type: 2}
-      propertyPath: selfDodgeAni
-      value: 
-      objectReference: {fileID: 308607975}
-    - target: {fileID: 1585975545454626, guid: 4a7886eb9f9937642b4c7d4dc2212dd7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a7886eb9f9937642b4c7d4dc2212dd7, type: 2}

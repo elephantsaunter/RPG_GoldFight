@@ -28,6 +28,8 @@ public class ResSvc: MonoBehaviour {
         skillMoveDic.Clear();
         InitSkillMoveCfg(PathDefine.SkillMoveCfg);
         PECommon.Log("Reset SkillCfg...");
+        skillActionDic.Clear();
+        InitSkillActionCfg(PathDefine.SkillActionCfg);
     }
 
     private Action prgCB = null;
@@ -562,6 +564,12 @@ public class ResSvc: MonoBehaviour {
                             break;
                         case "isCombo":
                             sc.isCombo = e.InnerText.Equals("1");
+                            break;
+                        case "isCollide":
+                            sc.isCollide = e.InnerText.Equals("1");
+                            break;
+                        case "isBreak":
+                            sc.isBreak = e.InnerText.Equals("1");
                             break;
                         case "dmgType":
                             if (e.InnerText.Equals("1")) {

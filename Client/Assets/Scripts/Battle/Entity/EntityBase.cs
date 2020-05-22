@@ -22,7 +22,9 @@ public abstract class EntityBase {
         }
     }
     public bool canControl = true;
+    public bool canRisSkill = true;
     public EntityType entityType = EntityType.None;
+    public EntityState entityState = EntityState.None;
     private BattleProps props;
     public BattleProps Props {
         get {
@@ -120,6 +122,7 @@ public abstract class EntityBase {
             }
         }
     }
+    #region FightInfoDisplay
     public virtual void SetDodge () {
         if(controller != null) {
             GameRoot.Instance.dynamicWnd.SetDodge(Name);
@@ -140,6 +143,7 @@ public abstract class EntityBase {
             GameRoot.Instance.dynamicWnd.SetHPVal(Name, oldVal,newVal);
         }
     }
+    #endregion
     public virtual void SkillAttack(int skillID) {
         skillMgr.SkillAttack(this, skillID);
         skillMgr.AttackDamage(this, skillID);
@@ -159,12 +163,17 @@ public abstract class EntityBase {
         }
         return null;
     }
-
+    public AudioSource GetAudio() {
+        return controller.GetComponent<AudioSource>();
+    }
     public virtual Vector2 CalcTargetDir() {
         return Vector2.zero;
     }
     public void ExitCurtSkill () {
         canControl = true;
+        if(!curtSkillCfg.isBreak) {
+            entityState = EntityState.None;
+        }
         if(curtSkillCfg.isCombo) {
             // check whether continous
             if (comboQue.Count > 0) {

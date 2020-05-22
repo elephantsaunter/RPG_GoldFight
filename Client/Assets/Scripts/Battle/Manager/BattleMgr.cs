@@ -205,5 +205,8 @@ public class BattleMgr: MonoBehaviour {
     public Vector2 GetDirInput() {
         return BattleSys.Instance.GetDirInput();
     }
+    public bool CanRisSkill() {
+        return entitySelfPlayer.canRisSkill;
+    }
     #endregion
 }

@@ -11,6 +11,9 @@
     }
 
     public void Process (EntityBase entity, params object[] args) {
+        if(entity.entityType == EntityType.Player) {
+            entity.canRisSkill = false;
+        }
         // damage calculate and skill animation
         entity.SkillAttack((int)args[0]);
         //PECommon.Log("Process StateAttack");

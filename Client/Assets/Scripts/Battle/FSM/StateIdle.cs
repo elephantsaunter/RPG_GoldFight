@@ -17,6 +17,9 @@ class StateIdle: IState {
             // continously attack
             entity.Attack(entity.nextSkillID);
         } else {
+            if(entity.entityType == EntityType.Player) {
+                entity.canRisSkill = true;
+            }
             if (entity.GetDirInput() != Vector2.zero) {
                 // Youre player, and you have controlled the direction
                 entity.Move();

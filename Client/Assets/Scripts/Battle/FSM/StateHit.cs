@@ -11,6 +11,11 @@ public class StateHit: IState {
     public void Process (EntityBase entity, params object[] args) {
         entity.SetDir(Vector2.zero);
         entity.SetAction(Constants.ActionHit);
+
+        if(entity.entityType == EntityType.Player) {
+            AudioSource charAudio = entity.GetAudio();
+            AudioSvc.Instance.PlayCharAudio(Constants.AssassinHit,charAudio);
+        }
         TimerSvc.Instance.AddTimerTask((int tid) => {
             entity.SetAction(Constants.ActionDefault);
             entity.Idle();
@@ -25,7 +30,7 @@ public class StateHit: IState {
                 return clips[i].length;
             }
         }
-        // ensure that the ani is not found, default return 1s
+        // ensure that if the ani is not found, default return 1s
         return 1;
     }
 }

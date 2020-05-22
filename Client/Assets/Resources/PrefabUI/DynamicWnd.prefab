@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1702214972070330
 GameObject:
   m_ObjectHideFlags: 1
@@ -132,7 +132,7 @@ Animation:
   m_GameObject: {fileID: 1702214972070330}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 27abdc32eff1b374d84a6555250c52f8, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 27abdc32eff1b374d84a6555250c52f8, type: 2}
   m_WrapMode: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   tipsAni: {fileID: 111047868196990234}
   txtTips: {fileID: 114380661152258662}
   hpItemRoot: {fileID: 224718905162256896}
+  selfDodgeAni: {fileID: 111588026869882834}
 --- !u!222 &222203909922204432
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -18,6 +18,11 @@ public enum EntityType {
     Player,
     Monster
 }
+
+public enum EntityState {
+    None,
+    ControlledState, // be attacked, cannot be controlled, but can be hurted
+}
 public class Constants {
     private const string ColorRed = "<color=#FF0000FF>";
     private const string ColorGreen = "<color=#00FF00FF>";
@@ -58,6 +63,7 @@ public class Constants {
     public const string BGLogin = "bgLogin";
     public const string BGMainCity = "bgMainCity";
     public const string BGLeipzig = "bgLeipzig";
+    public const string AssassinHit = "assassin_Hit";
 
     // Login button audio
     public const string UILoginBtn = "uiLoginBtn";

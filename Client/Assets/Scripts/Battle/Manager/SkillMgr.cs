@@ -16,6 +16,13 @@ public class SkillMgr:MonoBehaviour {
     }
     public void AttackDamage(EntityBase entity,int skillID){
         SkillCfg skillCfg = resSvc.GetSkillCfg(skillID);
+        if(!skillCfg.isCollide) {
+            // ignore the physical collider layer 9 is player, layer 10 is monster
+            Physics.IgnoreLayerCollision(9, 10);
+            timerSvc.AddTimerTask((int tid) => {
+                Physics.IgnoreLayerCollision(9, 10, false);
+            }, skillCfg.skillTime);
+        }
         List<int> actionLst = skillCfg.skillActionLst;
         int sum = 0; 
         for(int i = 0; i< actionLst.Count; i++) {
@@ -27,7 +34,7 @@ public class SkillMgr:MonoBehaviour {
                     SkillAction(entity,skillCfg,index);
                 },sum);
             } else {
-                // no need to wait,do the attack mmediately
+                // no need to wait,do the attack immediately
                 SkillAction(entity, skillCfg,index);
             }
         }
@@ -110,7 +117,9 @@ public class SkillMgr:MonoBehaviour {
         }
         else {
             target.HP -= dmgSum;
-            target.Hit();
+            if(target.entityState != EntityState.ControlledState) {
+                target.Hit();
+            }
         }
     }
     private bool InRange(Vector3 from, Vector3 to, float range) {
@@ -121,7 +130,6 @@ public class SkillMgr:MonoBehaviour {
         }
         return true;
     }
-
     private bool InAngle(Transform player,Vector3 to, float angle) {
         // check the angle between the player and monster, whether in range
         if(angle==360) {
@@ -136,7 +144,6 @@ public class SkillMgr:MonoBehaviour {
             return false;
         }
     }
-
     public void AttackEffect(EntityBase entity, int skillID) {
         SkillCfg skillCfg = resSvc.GetSkillCfg(skillID);
         if(entity.entityType == EntityType.Player) {
@@ -156,6 +163,10 @@ public class SkillMgr:MonoBehaviour {
         CalcSkillMove(entity, skillCfg);
         entity.canControl = false;
         entity.SetDir(Vector2.zero);
+
+        if(!skillCfg.isBreak) {
+            entity.entityState = EntityState.ControlledState;
+        }
         timerSvc.AddTimerTask((int tid) => {
             entity.Idle();
         }, skillCfg.skillTime);
