@@ -10,6 +10,9 @@ public class SkillMgr:MonoBehaviour {
         PECommon.Log("Init SkillMgr Done");
     }
     public void SkillAttack(EntityBase entity,int skillID) {
+        entity.skMoveCBLst.Clear();
+        entity.skActionCBLst.Clear();
+
         AttackDamage(entity, skillID);
         AttackEffect(entity, skillID);
 
@@ -30,9 +33,11 @@ public class SkillMgr:MonoBehaviour {
             sum += skillActionCfg.delayTime;
             int index = i;
             if(sum > 0) {
-                timerSvc.AddTimerTask((int tid) => {
+                int actid = timerSvc.AddTimerTask((int tid) => {
                     SkillAction(entity,skillCfg,index);
+                    entity.RmvActionCB(tid);
                 },sum);
+                entity.skActionCBLst.Add(actid);
             } else {
                 // no need to wait,do the attack immediately
                 SkillAction(entity, skillCfg,index);

@@ -3,6 +3,14 @@
 public class StateHit: IState {
     public void Enter (EntityBase entity, params object[] args) {
         entity.currentAniState = AniState.Hit;
+        for(int i = 0;i<entity.skMoveCBLst.Count;i++) {
+            int tid = entity.skMoveCBLst[i];
+            TimerSvc.Instance.DelTask(tid);
+        }
+        for (int i = 0; i < entity.skActionCBLst.Count; i++) {
+            int tid = entity.skActionCBLst[i];
+            TimerSvc.Instance.DelTask(tid);
+        }
     }
 
     public void Exit (EntityBase entity, params object[] args) {

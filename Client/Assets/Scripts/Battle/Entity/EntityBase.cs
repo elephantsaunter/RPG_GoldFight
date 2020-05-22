@@ -54,7 +54,7 @@ public abstract class EntityBase {
     // skill move CallBack ID
     public List<int> skMoveCBLst = new List<int>();
     // skill hurt calc callback ID
-    public List<int> skActionLst = new List<int>();
+    public List<int> skActionCBLst = new List<int>();
     public void Born () {
         stateMgr.ChangeStatus(this, AniState.Born, null);
     }
@@ -188,7 +188,19 @@ public abstract class EntityBase {
         }
         SetAction(Constants.ActionDefault);
     }
-
+    public void RmvActionCB (int tid) {
+        int index = -1;
+        for (int i = 0; i < skActionCBLst.Count; i++) {
+            if (skActionCBLst[i] == tid) {
+                // taget is found
+                index = i;
+                break;
+            }
+        }
+        if (index != 1) {
+            skActionCBLst.RemoveAt(index);
+        }
+    }
     public void RmvMoveCB(int tid) {
         int index = -1;
         for(int i = 0;i <skMoveCBLst.Count; i++) {
