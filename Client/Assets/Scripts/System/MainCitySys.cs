@@ -40,6 +40,7 @@ public class MainCitySys : SystemRoot {
 			LoadPlayer(mapData);
 			//open main city UI
 			mainCityWnd.SetWndState();
+			GameRoot.Instance.GetComponent<AudioListener>().enabled = false;
 			// play background music
 			audioSvc.PlayBGMusic(Constants.BGMainCity);
 
