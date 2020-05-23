@@ -21,6 +21,7 @@ public class MapMgr: MonoBehaviour {
     }
     public bool SetNextTriggerOn() {
         waveIndex += 1;
+        GameRoot.AddTips("You can enter the Nr." + waveIndex + " wave now!");
         for(int i = 0; i < triggerArr.Length; i++) {
             if(triggerArr[i].triggerWave == waveIndex) {
                 BoxCollider co = triggerArr[i].GetComponent<BoxCollider>();
