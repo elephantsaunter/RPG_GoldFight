@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerData : MonoBehaviour {
     public int triggerWave;
     public MapMgr mapMgr;
-    public void OntriggerExit(Collider other) {
+    public void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "Player") {
             if(mapMgr != null) {
                 mapMgr.TriggerMonsterBorn(this,triggerWave);
