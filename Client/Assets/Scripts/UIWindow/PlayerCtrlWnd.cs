@@ -62,6 +62,7 @@ public class PlayerCtrlWnd : WindowRoot {
         HPSum = GameRoot.Instance.PlayerData.hp;
         SetText(txtSelfHP, HPSum + "/" + HPSum);
         imgSelfHP.fillAmount = 1;
+        SetBossHPBarState(false);
         RegisterTouchEvts();
         sk1CDTime = resSvc.GetSkillCfg(101).cdTime / 1000.0f;
         sk2CDTime = resSvc.GetSkillCfg(102).cdTime / 1000.0f;
@@ -122,7 +123,8 @@ public class PlayerCtrlWnd : WindowRoot {
             ClickSkill3();
         }
         float delta = Time.deltaTime;
-        if(isSk1CD) {
+        #region SkillCD
+        if (isSk1CD) {
             // cannot release skill
             sk1FillCount += delta;
             if(sk1FillCount>=sk1CDTime) {
@@ -185,6 +187,11 @@ public class PlayerCtrlWnd : WindowRoot {
                 sk3Num -= 1;
                 SetText(txtSk3CD, sk3Num);
             }
+        }
+        #endregion
+        if(transBossHPBar.gameObject.activeSelf) {
+            BlendBossHP();
+            imageYellow.fillAmount = currentPrg;
         }
     }
     public void RegisterTouchEvts () {
@@ -266,5 +273,31 @@ public class PlayerCtrlWnd : WindowRoot {
 
     public bool GetCanRisSkill() {
         return BattleSys.Instance.battleMgr.CanRisSkill();
+    }
+
+    public Transform transBossHPBar;
+    public Image imageRed;
+    public Image imageYellow;
+    private float currentPrg = 1f;
+    private float targetPrg = 1f;
+    public void SetBossHPBarVal(int oldVal, int newVal, int sumVal) {
+        currentPrg = oldVal * 1.0f / sumVal;
+        targetPrg = newVal * 1.0f / sumVal;
+        imageRed.fillAmount = targetPrg;
+    }
+    private void BlendBossHP() {
+        if(Mathf.Abs(currentPrg - targetPrg) < Constants.AccelerHPSpeed * Time.deltaTime) {
+            currentPrg = targetPrg;
+        }
+        else if(currentPrg > targetPrg) {
+            currentPrg -= Constants.AccelerHPSpeed * Time.deltaTime;
+        } else {
+            currentPrg += Constants.AccelerHPSpeed * Time.deltaTime;
+        }
+    }
+    public void SetBossHPBarState(bool state, float prg = 1) {
+        SetActive(transBossHPBar, state);
+        imageRed.fillAmount = prg;
+        imageYellow.fillAmount = prg;
     }
 }

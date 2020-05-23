@@ -115,7 +115,11 @@ public class BattleMgr: MonoBehaviour {
 
                 m.SetActive(false);
                 monsterDic.Add(m.name, em);
-                GameRoot.Instance.dynamicWnd.AddHpItemInfo(m.name,mc.hpRoot, em.HP);
+                if(md.mCfg.mType == MonsterType.Normal) {
+                    GameRoot.Instance.dynamicWnd.AddHpItemInfo(m.name,mc.hpRoot, em.HP);
+                } else if (md.mCfg.mType == MonsterType.Boss) {
+                    BattleSys.Instance.playerCtrlWnd.SetBossHPBarState(true);
+                }
             }
         }
     }

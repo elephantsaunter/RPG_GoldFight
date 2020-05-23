@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &8
 MonoBehaviour:
@@ -652,19 +652,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Resources/PrefabPlayer
+    - Assets/Resources/ResImages
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/PrefabPlayer
+  - Assets/Resources/ResImages
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\CODE\Unity\RPG_GoldFight\Client
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f2680000
-    m_LastClickedID: 26866
-    m_ExpandedIDs: 000000004a2900004e290000be2d00008e3200008433000068420000484e0000b4570000aa5a0000f46d0000bc6f0000907e0000428800004aaa00004caa00004eaa000050aa000000ca9a3bffffff7f
+    m_SelectedIDs: e66a0000
+    m_LastClickedID: 27366
+    m_ExpandedIDs: 000000005e29000062290000d22d0000a2320000983300007c4200005c4e0000c8570000be5a0000086e0000d06f0000a47e00005688000058aa00005aaa00005caa00005eaa000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 115.50049}
     m_SelectedIDs: 58320000
     m_LastClickedID: 12888
-    m_ExpandedIDs: 000000004a2900004e290000be2d00008e3200005c3300008433000068420000484e0000c2540000b457000038590000ea590000aa5a0000f46d0000bc6f0000907e0000428800004aaa00004caa00004eaa000050aa0000
+    m_ExpandedIDs: 000000005e29000062290000d22d0000a2320000983300007c4200005c4e0000c8570000be5a0000086e0000d06f0000a47e00005688000058aa00005aaa00005caa00005eaa0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,7 +720,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000fa2a0000382a00001e2d000028320000222d00001253000050730000
+    m_ExpandedInstanceIDs: c6230000fa2a0000382a00001e2d000028320000222d000012530000507300006aaa0000c23d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,7 +744,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 79.5}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 154
 --- !u!114 &17
@@ -810,9 +810,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: a2e6feffd0e6feff00e7feff02e7feff06e7feff6c68ffffa2fbfffff4ffffff00000000f8990000209a0000
+    m_SelectedIDs: e6ccffff
+    m_LastClickedID: -13082
+    m_ExpandedIDs: ceccfffff4ccffff08cdffff12e4ffffb8f0ffffbcf0ffff9cfbfffff4ffffff00000000089a0000309a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -868,9 +868,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 709.7191, y: 399.13345, z: 20.125}
+    m_Target: {x: 642.6208, y: 662.9045, z: -3.25}
     speed: 2
-    m_Value: {x: 709.7191, y: 399.13345, z: 20.125}
+    m_Value: {x: 642.6208, y: 662.9045, z: -3.25}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -898,9 +898,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 757.3427
+    m_Target: 890.0232
     speed: 2
-    m_Value: 757.3427
+    m_Value: 890.0232
   m_Ortho:
     m_Target: 1
     speed: 2

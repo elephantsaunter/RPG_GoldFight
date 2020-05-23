@@ -220,4 +220,31 @@ public abstract class EntityBase {
             skMoveCBLst.RemoveAt(index);
         }
     }
+    public void RmvSkillCB() {
+        SetDir(Vector2.zero);
+        SetSkillMoveState(false);
+        for (int i = 0; i < skMoveCBLst.Count; i++) {
+            int tid = skMoveCBLst[i];
+            TimerSvc.Instance.DelTask(tid);
+        }
+        for (int i = 0; i < skActionCBLst.Count; i++) {
+            int tid = skActionCBLst[i];
+            TimerSvc.Instance.DelTask(tid);
+        }
+        // if attack is interrupted, delete the callback
+        if (skEndCB != -1) {
+            TimerSvc.Instance.DelTask(skEndCB);
+            skEndCB = -1;
+        }
+        skMoveCBLst.Clear();
+        skActionCBLst.Clear();
+
+        // clear continously attack(combo)
+        if (nextSkillID != 0 || comboQue.Count > 0) {
+            nextSkillID = 0;
+            comboQue.Clear();
+            battleMgr.lastAtkTime = 0;
+            battleMgr.comboIndex = 0;
+        }
+    }
 }

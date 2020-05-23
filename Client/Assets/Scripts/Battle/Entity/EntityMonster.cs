@@ -109,4 +109,11 @@ public class EntityMonster: EntityBase {
             return false;
         }
     }
+    public override void SetHPVal (int oldVal, int newVal) {
+        if(md.mCfg.mType == MonsterType.Boss) {
+            BattleSys.Instance.playerCtrlWnd.SetBossHPBarVal(oldVal, newVal, Props.hp);
+        } else {
+            base.SetHPVal(oldVal, newVal);
+        }
+    }
 }
