@@ -9,8 +9,10 @@
 
     public void Process (EntityBase entity, params object[] args) {
         entity.SetAction(Constants.ActionDie);
-        TimerSvc.Instance.AddTimerTask((int tid) => {
-            entity.SetActive(false);
-        }, Constants.DieAniLength);
+        if(entity.entityType == EntityType.Monster) {
+            TimerSvc.Instance.AddTimerTask((int tid) => {
+                    entity.SetActive(false);
+            }, Constants.DieAniLength);
+        }
     }
 }

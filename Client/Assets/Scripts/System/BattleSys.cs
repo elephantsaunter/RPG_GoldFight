@@ -23,7 +23,10 @@ public class BattleSys: SystemRoot {
         battleMgr.Init(mapid);
         SetPlayerCtrlWndState();
     }
-
+    public void EndBattle(int restHP) {
+        playerCtrlWnd.SetWndState(false);
+        GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
+    }
     public void SetPlayerCtrlWndState(bool isActive = true) {
         playerCtrlWnd.SetWndState(isActive);
     }

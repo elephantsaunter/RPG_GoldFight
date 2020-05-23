@@ -34,8 +34,10 @@ public class SkillMgr:MonoBehaviour {
             int index = i;
             if(sum > 0) {
                 int actid = timerSvc.AddTimerTask((int tid) => {
-                    SkillAction(entity,skillCfg,index);
-                    entity.RmvActionCB(tid);
+                    if(entity!=null) {
+                        SkillAction(entity,skillCfg,index);
+                        entity.RmvActionCB(tid);
+                    }
                 },sum);
                 entity.skActionCBLst.Add(actid);
             } else {
@@ -52,6 +54,9 @@ public class SkillMgr:MonoBehaviour {
         if(caster.entityType == EntityType.Monster) {
             // monster attack the player
             EntityPlayer target = caster.battleMgr.entitySelfPlayer;
+            if(target == null) {
+                return;
+            }
             // check distance and angle
             if (InRange(caster.GetPos(), target.GetPos(), skillActionCfg.radius)
                 && InAngle(caster.GetTrans(), target.GetPos(), skillActionCfg.angle)) {
@@ -118,13 +123,19 @@ public class SkillMgr:MonoBehaviour {
             target.HP = 0;
             // target die
             target.Die();
-            target.battleMgr.RmvMonster(target.Name);
+            if(target.entityType == EntityType.Monster) {
+                target.battleMgr.RmvMonster(target.Name);
+            }
         }
         else {
             target.HP -= dmgSum;
             if(target.entityState == EntityState.None && target.GetBreakState()) {
                 // state which not be controlled AND can be interrupted
                 target.Hit();
+            }
+            else if(target.entityType == EntityType.Player) {
+                target.battleMgr.EndBattle(0);
+                target.battleMgr.entitySelfPlayer = null;
             }
         }
     }

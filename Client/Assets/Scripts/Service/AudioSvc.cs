@@ -11,7 +11,11 @@ public class AudioSvc: MonoBehaviour {
         PECommon.Log("Init AudioSvc...");
     }
 
-
+    public void StopBGMusic() {
+        if(bgAudio!=null) {
+            bgAudio.Stop();
+        }
+    }
     public void PlayBGMusic (string name, bool isLoop = true) {
         AudioClip audio = ResSvc.Instance.LoadAudio("ResAudio/" + name, true);
         if (bgAudio.clip == null || bgAudio.clip.name != audio.name) {

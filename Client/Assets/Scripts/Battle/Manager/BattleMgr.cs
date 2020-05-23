@@ -53,12 +53,18 @@ public class BattleMgr: MonoBehaviour {
             if(triggerCheck && monsterDic.Count == 0) {
                 bool isExist = mapMgr.SetNextTriggerOn();
                 triggerCheck = false;
-                //if(!isExist) {
+                if(!isExist) {
                     // all waves were completed, mission sucess
+                    EndBattle(entitySelfPlayer.HP);
                     // TODO reward calc
-                //}
+                }
             }
         }
+    }
+    public void EndBattle(int restHP) {
+        AudioSvc.Instance.StopBGMusic();
+        AudioSvc.Instance.StopBGMusic();
+        BattleSys.Instance.EndBattle(restHP);
     }
     private void LoadPlayer(MapCfg mapCfg) {
         GameObject player = resSvc.LoadPrefab(PathDefine.AssissinBattlePlayerPrefab);

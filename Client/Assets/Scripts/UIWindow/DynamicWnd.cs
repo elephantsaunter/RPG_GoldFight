@@ -28,7 +28,6 @@ public class DynamicWnd : WindowRoot {
             tipsQue.Enqueue(tips);
         }
     }
-
     private void Update() {
         if (tipsQue.Count > 0 && isTipsShow == false) {
             lock (tipsQue) {
@@ -38,7 +37,6 @@ public class DynamicWnd : WindowRoot {
             }
         }
     }
-
     private void SetTips(string tips) {
         SetActive(txtTips);
         SetText(txtTips, tips);
@@ -52,7 +50,6 @@ public class DynamicWnd : WindowRoot {
             isTipsShow = false;
         }));
     }
-
     private IEnumerator AniPlayDone(float sec, Action cb) {
         yield return new WaitForSeconds(sec);
         if (cb != null) {
@@ -60,7 +57,6 @@ public class DynamicWnd : WindowRoot {
         }
     }
     #endregion
-
     public void AddHpItemInfo (string mName, Transform trans, int hp) {
         ItemEntityHP item = null;
         if (itemDic.TryGetValue(mName, out item)) {
@@ -81,6 +77,12 @@ public class DynamicWnd : WindowRoot {
             itemDic.Remove(mName);
         }
     }
+    public void RmvAllHPInfo() {
+        foreach(var item in itemDic) {
+            Destroy(item.Value.gameObject);
+        }
+        itemDic.Clear();
+    }
     public void SetDodge(string key) {
         ItemEntityHP item = null;
         if(itemDic.TryGetValue(key,out item)) {
@@ -99,14 +101,12 @@ public class DynamicWnd : WindowRoot {
             item.SetHurt(hurt);
         }
     }
-
     public void SetHPVal (string key, int oldVal, int newVal) {
         ItemEntityHP item = null;
         if (itemDic.TryGetValue(key, out item)) {
             item.SetHPVal(oldVal,newVal);
         }
     }
-
     public void SetSelfDodge() {
         selfDodgeAni.Stop();
         selfDodgeAni.Play();
