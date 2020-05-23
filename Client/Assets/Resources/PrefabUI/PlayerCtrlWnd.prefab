@@ -1986,7 +1986,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114029430397683890}
-        m_MethodName: ClickResetCfgs
+        m_MethodName: ClickHeadBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

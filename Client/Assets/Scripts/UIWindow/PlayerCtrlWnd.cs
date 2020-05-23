@@ -225,7 +225,6 @@ public class PlayerCtrlWnd : WindowRoot {
             BattleSys.Instance.SetMoveDir(currentDir);
         });
     }
-   
     
     public void ClickNormalAtk () {
         BattleSys.Instance.ReqReleaseSkill(0);
@@ -251,7 +250,6 @@ public class PlayerCtrlWnd : WindowRoot {
             SetText(txtSk2CD, sk2Num);
         }
     }
-
     public void ClickSkill3 () {
         if (isSk3CD == false && GetCanRisSkill()) {
             BattleSys.Instance.ReqReleaseSkill(3);
@@ -266,11 +264,14 @@ public class PlayerCtrlWnd : WindowRoot {
     public void ClickResetCfgs() {
         resSvc.ResetSkillCfgs();
     }
+    public void ClickHeadBtn() {
+        BattleSys.Instance.battleMgr.isPauseGame = true;
+        BattleSys.Instance.SetBattleEndWndState(BattleEndType.Pause);
+    }
     public void SetSelfHPVal(int val) {
         SetText(txtSelfHP, val + "/" + HPSum);
         imgSelfHP.fillAmount = val * 1.0f / HPSum;
     }
-
     public bool GetCanRisSkill() {
         return BattleSys.Instance.battleMgr.CanRisSkill();
     }

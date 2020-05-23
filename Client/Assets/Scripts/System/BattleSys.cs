@@ -1,8 +1,10 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class BattleSys: SystemRoot {
     public static BattleSys Instance = null;
     public PlayerCtrlWnd playerCtrlWnd;
+    public BattleEndWnd battleEndWnd;
     public BattleMgr battleMgr;
 
 
@@ -30,7 +32,10 @@ public class BattleSys: SystemRoot {
     public void SetPlayerCtrlWndState(bool isActive = true) {
         playerCtrlWnd.SetWndState(isActive);
     }
-
+    public void SetBattleEndWndState(BattleEndType endType, bool isActive = true) {
+        battleEndWnd.SetWndType(endType);
+        battleEndWnd.SetWndState(isActive);
+    }
     public void SetMoveDir (Vector2 dir) {
         battleMgr.SetSelfPlayerMoveDir(dir);
     }

@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\Common\PETools.cs" />
      <Compile Include="Assets\Scripts\Common\SystemRoot.cs" />
      <Compile Include="Assets\Scripts\Common\TestPlayer.cs" />
+     <Compile Include="Assets\Scripts\Common\TriggerData.cs" />
      <Compile Include="Assets\Scripts\Common\WindowRoot.cs" />
      <Compile Include="Assets\Scripts\Net\ClientSession.cs" />
      <Compile Include="Assets\Scripts\NPC\Npc.cs" />
@@ -92,6 +93,7 @@
      <Compile Include="Assets\Scripts\System\LoginSys.cs" />
      <Compile Include="Assets\Scripts\System\MainCitySys.cs" />
      <Compile Include="Assets\Scripts\System\MissionSys.cs" />
+     <Compile Include="Assets\Scripts\UIWindow\BattleEndWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\BuyWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\ChatWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\CreateWnd.cs" />
@@ -108,7 +110,6 @@
      <Compile Include="Assets\Scripts\UIWindow\PlayerCtrlWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\StrongWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\TaskWnd.cs" />
-     <Compile Include="Assets\TriggerData.cs" />
      <None Include="Assets\Resources\OUT_UIResources\Font\BattleFont\BattleFont.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Atlases\ScenePassed\ScenePassed.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Atlases\FightWin\FightWin.txt" />

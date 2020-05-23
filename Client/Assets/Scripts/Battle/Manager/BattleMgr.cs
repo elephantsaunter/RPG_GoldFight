@@ -43,6 +43,7 @@ public class BattleMgr: MonoBehaviour {
         });
     }
     public bool triggerCheck = true;
+    public bool isPauseGame = false;
     public void Update() {
         foreach(var item in monsterDic) {
             EntityMonster em = item.Value;

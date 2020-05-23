@@ -18066,7 +18066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4461722745438976}
   - component: {fileID: 65819714106535496}
-  - component: {fileID: 114083384940921840}
+  - component: {fileID: 114812608218135998}
   m_Layer: 8
   m_Name: door2
   m_TagString: Untagged
@@ -18439,7 +18439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4653812580429504}
   - component: {fileID: 65780809632693620}
-  - component: {fileID: 114751569521176498}
+  - component: {fileID: 114585547259426012}
   m_Layer: 8
   m_Name: door3
   m_TagString: Untagged
@@ -20858,19 +20858,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114083384940921840
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1568722264195668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86196faf232eb3439f682b546d22e28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerWave: 2
-  mapMgr: {fileID: 114188233881048860}
 --- !u!114 &114188233881048860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20883,9 +20870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerArr:
-  - {fileID: 114083384940921840}
-  - {fileID: 114751569521176498}
---- !u!114 &114751569521176498
+  - {fileID: 114812608218135998}
+  - {fileID: 114585547259426012}
+--- !u!114 &114585547259426012
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -20893,10 +20880,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986553909874128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86196faf232eb3439f682b546d22e28, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fd1528c9ad6546449dfc42b51fddb7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggerWave: 3
+  mapMgr: {fileID: 114188233881048860}
+--- !u!114 &114812608218135998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568722264195668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd1528c9ad6546449dfc42b51fddb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerWave: 2
   mapMgr: {fileID: 114188233881048860}
 --- !u!198 &198197396696666222
 ParticleSystem:
