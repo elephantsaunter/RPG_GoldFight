@@ -1,0 +1,44 @@
+{"frames": {
+
+"11007001.png":
+{
+	"frame": {"x":2,"y":2,"w":298,"h":208},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":298,"h":208},
+	"sourceSize": {"w":298,"h":208}
+},
+"11007002.png":
+{
+	"frame": {"x":2,"y":212,"w":264,"h":212},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":264,"h":212},
+	"sourceSize": {"w":264,"h":212}
+},
+"11007003.png":
+{
+	"frame": {"x":2,"y":426,"w":263,"h":240},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":263,"h":240},
+	"sourceSize": {"w":263,"h":240}
+},
+"11007004.png":
+{
+	"frame": {"x":2,"y":668,"w":254,"h":208},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":254,"h":208},
+	"sourceSize": {"w":254,"h":208}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "FightWin.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0ee6f9b55564a0507c3bef8c30724ec9$"
+}
+}

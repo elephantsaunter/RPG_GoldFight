@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 57d73dc7c7ab13d4e816dd44aa60360b
+TrueTypeFontImporter:
+  serializedVersion: 2
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames:
+  - MS Song16
+  customCharacters: 
+  fontRenderingMode: 2
+  userData: 

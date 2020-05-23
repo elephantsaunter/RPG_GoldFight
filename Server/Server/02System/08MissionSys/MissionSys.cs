@@ -34,6 +34,7 @@ public class MissionSys {
             msg.err = (int)ErrorCode.LackPower;
 
         } else {
+            pd.power -= power;
             if (cacheSvc.UpdatePlayerData(pd.id, pd)) {
                 RspMission rspMission = new RspMission {
                     fbid = data.fbid,

@@ -57,7 +57,7 @@
      <Compile Include="Assets\Standard Assets\Editor\Water (Pro Only)\Water4\WaterBaseEditor.cs" />
      <Compile Include="Assets\Standard Assets\Editor\Water (Pro Only)\Water4\WaterEditorUtility.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>G:/CODE/Unity/Game/Client/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>G:/CODE/Unity/RPG_GoldFight/Client/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>G:/Application/unity editor/2017.4.38f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -261,10 +261,10 @@
  <HintPath>G:/Application/unity editor/2017.4.38f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="PEProtocol">
- <HintPath>G:/CODE/Unity/Game/Client/Assets/Scripts/Net/PEProtocol.dll</HintPath>
+ <HintPath>G:/CODE/Unity/RPG_GoldFight/Client/Assets/Scripts/Net/PEProtocol.dll</HintPath>
  </Reference>
  <Reference Include="PESocket">
- <HintPath>G:/CODE/Unity/Game/Client/Assets/Scripts/Net/PESocket.dll</HintPath>
+ <HintPath>G:/CODE/Unity/RPG_GoldFight/Client/Assets/Scripts/Net/PESocket.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/Carol/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>

@@ -1,0 +1,778 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: GemIconAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9d4110b8dac84e878673cc80102b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 18d6acc8475e11b41b9326487255f6e7, type: 2}
+  sprites:
+  - name: 12000033
+    outer:
+      x: 172
+      y: 431
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 431
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000031
+    outer:
+      x: 172
+      y: 216
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 216
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000038
+    outer:
+      x: 86
+      y: 388
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 388
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000046
+    outer:
+      x: 0
+      y: 431
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 431
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000065
+    outer:
+      x: 129
+      y: 431
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 431
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000036
+    outer:
+      x: 43
+      y: 216
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 216
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000079
+    outer:
+      x: 43
+      y: 345
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 345
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000053
+    outer:
+      x: 86
+      y: 259
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 259
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000056
+    outer:
+      x: 43
+      y: 302
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 302
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000048
+    outer:
+      x: 43
+      y: 388
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 388
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000064
+    outer:
+      x: 0
+      y: 302
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 302
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000077
+    outer:
+      x: 129
+      y: 173
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 173
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000061
+    outer:
+      x: 43
+      y: 87
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 87
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000055
+    outer:
+      x: 129
+      y: 302
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 302
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000042
+    outer:
+      x: 129
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000071
+    outer:
+      x: 172
+      y: 388
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 388
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000078
+    outer:
+      x: 0
+      y: 259
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 259
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000057
+    outer:
+      x: 172
+      y: 345
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 345
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000052
+    outer:
+      x: 0
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000058
+    outer:
+      x: 86
+      y: 431
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 431
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000045
+    outer:
+      x: 43
+      y: 173
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 173
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000075
+    outer:
+      x: 129
+      y: 259
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 259
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000037
+    outer:
+      x: 86
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000047
+    outer:
+      x: 0
+      y: 388
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 388
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000069
+    outer:
+      x: 86
+      y: 345
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 345
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000049
+    outer:
+      x: 0
+      y: 345
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 345
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000072
+    outer:
+      x: 86
+      y: 216
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 216
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000051
+    outer:
+      x: 172
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000059
+    outer:
+      x: 0
+      y: 173
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 173
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000032
+    outer:
+      x: 129
+      y: 216
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 216
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000066
+    outer:
+      x: 0
+      y: 44
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 44
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000041
+    outer:
+      x: 172
+      y: 259
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 259
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000068
+    outer:
+      x: 86
+      y: 302
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 302
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000067
+    outer:
+      x: 0
+      y: 130
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 130
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000073
+    outer:
+      x: 0
+      y: 87
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 87
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000044
+    outer:
+      x: 129
+      y: 388
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 388
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000054
+    outer:
+      x: 86
+      y: 173
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 173
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000063
+    outer:
+      x: 172
+      y: 302
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 302
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000034
+    outer:
+      x: 0
+      y: 216
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 216
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000076
+    outer:
+      x: 43
+      y: 259
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 259
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000043
+    outer:
+      x: 43
+      y: 44
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 44
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000062
+    outer:
+      x: 43
+      y: 130
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 130
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000035
+    outer:
+      x: 43
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000039
+    outer:
+      x: 43
+      y: 431
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 431
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000074
+    outer:
+      x: 129
+      y: 345
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 345
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

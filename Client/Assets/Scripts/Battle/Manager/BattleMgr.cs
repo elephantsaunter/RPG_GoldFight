@@ -49,9 +49,9 @@ public class BattleMgr: MonoBehaviour {
             em.TickAILogic();
         }
         // check this wave whether monster all dead
-        if(mapCfg != null) {
+        if(mapCfg != null && mapMgr != null) {
             if(triggerCheck && monsterDic.Count == 0) {
-                //bool isExist = mapMgr.SetNextTriggerOn();
+                bool isExist = mapMgr.SetNextTriggerOn();
                 triggerCheck = false;
                 //if(!isExist) {
                     // all waves were completed, mission sucess
@@ -198,6 +198,7 @@ public class BattleMgr: MonoBehaviour {
         } 
         else if(entitySelfPlayer.currentAniState == AniState.Idle 
             || entitySelfPlayer.currentAniState == AniState.Move) {
+            comboIndex = 0;
             lastAtkTime = TimerSvc.Instance.GetNowTime();
             entitySelfPlayer.Attack(comboArr[comboIndex]);
         }

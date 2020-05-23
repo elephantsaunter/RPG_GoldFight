@@ -109,7 +109,12 @@
      <Compile Include="Assets\Scripts\UIWindow\StrongWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\TaskWnd.cs" />
      <Compile Include="Assets\TriggerData.cs" />
+     <None Include="Assets\Resources\OUT_UIResources\Font\BattleFont\BattleFont.txt" />
+     <None Include="Assets\Resources\OUT_UIResources\Atlases\ScenePassed\ScenePassed.txt" />
+     <None Include="Assets\Resources\OUT_UIResources\Atlases\FightWin\FightWin.txt" />
+     <None Include="Assets\Resources\OUT_UIResources\Font\Font_3\Font_3.txt" />
      <None Include="Assets\Compond\MakeChar\Shader\PlayerShader.shader" />
+     <None Include="Assets\Resources\OUT_UIResources\Atlases\FightFail\FightFail.txt" />
      <None Include="Assets\Resources\ResCfgs\monster.xml" />
      <None Include="Assets\Resources\ResCfgs\strong.xml" />
      <None Include="Assets\Rin 3d - Anime Style\ReadMe!.txt" />
@@ -124,8 +129,15 @@
      <None Include="Assets\Resources\ResCfgs\skill.xml" />
      <None Include="Assets\Compond\Shader\Mul-skybox.shader" />
      <None Include="Assets\Resources\ResCfgs\skillaction.xml" />
+     <None Include="Assets\Resources\OUT_UIResources\Atlases\RoleInformation\RoleInformation.txt" />
+     <None Include="Assets\Resources\OUT_UIResources\Font\Font_4\Font_4.txt" />
+     <None Include="Assets\Resources\OUT_UIResources\Font\Font_5\Font_5.txt" />
      <None Include="Assets\Resources\ResCfgs\skillmove.xml" />
      <None Include="Assets\Resources\ResCfgs\guide.xml" />
+     <None Include="Assets\Resources\OUT_UIResources\Font\PassFont\FassFont.txt" />
+ <Reference Include="Assembly-UnityScript-firstpass">
+ <HintPath>G:/CODE/Unity/RPG_GoldFight/Client/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>G:/Application/unity editor/2017.4.38f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
@@ -306,6 +318,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Carol/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{079D398E-4AFC-CD7E-7881-F923D075EBD1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

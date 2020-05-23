@@ -1,0 +1,1194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: EquipIconAtlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9d4110b8dac84e878673cc80102b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: c9121ccac0e716648940996de56784af, type: 2}
+  sprites:
+  - name: 12000148
+    outer:
+      x: 43
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000151
+    outer:
+      x: 86
+      y: 206
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 206
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000197
+    outer:
+      x: 43
+      y: 163
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 163
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000163
+    outer:
+      x: 311
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 311
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000201
+    outer:
+      x: 0
+      y: 120
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 120
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000170
+    outer:
+      x: 344
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 344
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000161
+    outer:
+      x: 182
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 182
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000147
+    outer:
+      x: 215
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 215
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000200
+    outer:
+      x: 0
+      y: 77
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 77
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000208
+    outer:
+      x: 387
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 387
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000209
+    outer:
+      x: 387
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 387
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000164
+    outer:
+      x: 430
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 430
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000167
+    outer:
+      x: 268
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 268
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000190
+    outer:
+      x: 172
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000196
+    outer:
+      x: 129
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000205
+    outer:
+      x: 43
+      y: 34
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 34
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000202
+    outer:
+      x: 215
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 215
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000195
+    outer:
+      x: 86
+      y: 34
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 34
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000153
+    outer:
+      x: 129
+      y: 249
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 249
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000206
+    outer:
+      x: 129
+      y: 77
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 77
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000198
+    outer:
+      x: 43
+      y: 206
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 206
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000207
+    outer:
+      x: 225
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 225
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000152
+    outer:
+      x: 86
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000166
+    outer:
+      x: 43
+      y: 120
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 120
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000144
+    outer:
+      x: 43
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000192
+    outer:
+      x: 129
+      y: 34
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 34
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000204
+    outer:
+      x: 129
+      y: 163
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 163
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000155
+    outer:
+      x: 354
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 354
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000143
+    outer:
+      x: 0
+      y: 292
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 292
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000165
+    outer:
+      x: 397
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 397
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000191
+    outer:
+      x: 86
+      y: 249
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 249
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000154
+    outer:
+      x: 440
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 440
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000199
+    outer:
+      x: 129
+      y: 292
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 292
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000162
+    outer:
+      x: 53
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 53
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000203
+    outer:
+      x: 0
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000193
+    outer:
+      x: 258
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 258
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000145
+    outer:
+      x: 0
+      y: 34
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 34
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000150
+    outer:
+      x: 0
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000140
+    outer:
+      x: 172
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000194
+    outer:
+      x: 129
+      y: 120
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 120
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000168
+    outer:
+      x: 344
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 344
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000142
+    outer:
+      x: 43
+      y: 249
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 249
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000146
+    outer:
+      x: 43
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000160
+    outer:
+      x: 139
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 139
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000141
+    outer:
+      x: 0
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000211
+    outer:
+      x: 0
+      y: 464
+      width: 48
+      height: 48
+    inner:
+      x: 0
+      y: 464
+      width: 48
+      height: 48
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000172
+    outer:
+      x: 43
+      y: 292
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 292
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000171
+    outer:
+      x: 0
+      y: 249
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 249
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000173
+    outer:
+      x: 301
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 301
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000448
+    outer:
+      x: 86
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000453
+    outer:
+      x: 215
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 215
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000454
+    outer:
+      x: 86
+      y: 77
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 77
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000455
+    outer:
+      x: 387
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 387
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000444
+    outer:
+      x: 301
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 301
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000456
+    outer:
+      x: 129
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000442
+    outer:
+      x: 129
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000445
+    outer:
+      x: 0
+      y: 163
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 163
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000447
+    outer:
+      x: 172
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 172
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000451
+    outer:
+      x: 86
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000458
+    outer:
+      x: 258
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 258
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000443
+    outer:
+      x: 86
+      y: 292
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 292
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000449
+    outer:
+      x: 0
+      y: 206
+      width: 38
+      height: 38
+    inner:
+      x: 0
+      y: 206
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000450
+    outer:
+      x: 86
+      y: 120
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 120
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000452
+    outer:
+      x: 86
+      y: 163
+      width: 38
+      height: 38
+    inner:
+      x: 86
+      y: 163
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000441
+    outer:
+      x: 344
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 344
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000440
+    outer:
+      x: 430
+      y: 378
+      width: 38
+      height: 38
+    inner:
+      x: 430
+      y: 378
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000446
+    outer:
+      x: 301
+      y: 335
+      width: 38
+      height: 38
+    inner:
+      x: 301
+      y: 335
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000526
+    outer:
+      x: 96
+      y: 474
+      width: 38
+      height: 38
+    inner:
+      x: 96
+      y: 474
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000527
+    outer:
+      x: 43
+      y: 77
+      width: 38
+      height: 38
+    inner:
+      x: 43
+      y: 77
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000528
+    outer:
+      x: 258
+      y: 421
+      width: 38
+      height: 38
+    inner:
+      x: 258
+      y: 421
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 12000159
+    outer:
+      x: 129
+      y: 206
+      width: 38
+      height: 38
+    inner:
+      x: 129
+      y: 206
+      width: 38
+      height: 38
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

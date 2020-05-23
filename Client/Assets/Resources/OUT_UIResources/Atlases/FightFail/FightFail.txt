@@ -1,0 +1,44 @@
+{"frames": {
+
+"11008002.png":
+{
+	"frame": {"x":2,"y":2,"w":316,"h":212},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":316,"h":212},
+	"sourceSize": {"w":316,"h":212}
+},
+"11008003.png":
+{
+	"frame": {"x":2,"y":216,"w":279,"h":271},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":279,"h":271},
+	"sourceSize": {"w":279,"h":271}
+},
+"11008004.png":
+{
+	"frame": {"x":2,"y":489,"w":252,"h":228},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":252,"h":228},
+	"sourceSize": {"w":252,"h":228}
+},
+"11008005.png":
+{
+	"frame": {"x":2,"y":719,"w":291,"h":274},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":291,"h":274},
+	"sourceSize": {"w":291,"h":274}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "FightFail.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ae50593587d62cec0c00c8ac4eafbfae$"
+}
+}

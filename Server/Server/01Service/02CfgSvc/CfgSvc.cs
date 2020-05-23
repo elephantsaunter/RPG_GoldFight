@@ -63,7 +63,6 @@ public class CfgSvc {
         return null;
     }
     #endregion
-
     #region TaskReward
     private Dictionary<int, TaskRewardCfg> taskRewardDic = new Dictionary<int, TaskRewardCfg>();
     private void InitTaskRewardCfg () {
@@ -108,7 +107,6 @@ public class CfgSvc {
         return null;
     }
     #endregion
-
     #region Map Config
     private Dictionary<int, MapCfg> mapDic = new Dictionary<int, MapCfg>();
     private void InitMapCfg () {
