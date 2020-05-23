@@ -28,6 +28,18 @@ public class BattleSys: SystemRoot {
     public void EndBattle(int restHP) {
         playerCtrlWnd.SetWndState(false);
         GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
+        if (restHP > 0) {
+            // win, send end fight request
+            // TODO
+        } else {
+            SetBattleEndWndState(BattleEndType.Lose);
+        }
+    }
+    public void DestroyBattle() {
+        SetPlayerCtrlWndState(false);
+        SetBattleEndWndState(BattleEndType.None, false);
+        GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
+        Destroy(battleMgr.gameObject);
     }
     public void SetPlayerCtrlWndState(bool isActive = true) {
         playerCtrlWnd.SetWndState(isActive);

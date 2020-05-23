@@ -39,6 +39,8 @@ public class BattleEndWnd : WindowRoot {
     public void ClickExitBtn() {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
         // enter city and fail
+        MainCitySys.Instance.EnterMainCity();
+        BattleSys.Instance.DestroyBattle();
     }
     public void ClickSureBtn() {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
