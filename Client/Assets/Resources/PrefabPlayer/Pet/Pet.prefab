@@ -1261,6 +1261,7 @@ GameObject:
   - component: {fileID: 14300000}
   - component: {fileID: 114591607372515230}
   - component: {fileID: 95018058537511948}
+  - component: {fileID: 114937141133750430}
   m_Layer: 0
   m_Name: Pet
   m_TagString: Untagged
@@ -2433,9 +2434,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100166}
-  m_LocalRotation: {x: 0, y: 0.99825436, z: 0, w: 0.059061307}
-  m_LocalPosition: {x: 226.3483, y: 0, z: 240.9911}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalRotation: {x: -0, y: 0.37754345, z: -0, w: -0.9259919}
+  m_LocalPosition: {x: 54.756, y: 0.201, z: 19.149}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 400134}
   - {fileID: 400012}
@@ -2447,7 +2448,7 @@ Transform:
   - {fileID: 400164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 315.637, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2837,3 +2838,14 @@ MonoBehaviour:
   daggeratk3fx: {fileID: 0}
   daggeratk4fx: {fileID: 0}
   daggeratk5fx: {fileID: 0}
+--- !u!114 &114937141133750430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477e64dc342add64e99c831aa70e2e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

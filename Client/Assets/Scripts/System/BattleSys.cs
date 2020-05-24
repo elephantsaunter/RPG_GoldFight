@@ -33,8 +33,8 @@ public class BattleSys: SystemRoot {
     public void EndBattle(int restHP,bool isWin) {
         playerCtrlWnd.SetWndState(false);
         GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
-        GameRoot.AddTips("die");
         if (isWin) {
+            GameRoot.AddTips("Congratulations");
             double endTime = timerSvc.GetNowTime();
             // win, send end fight request
             GameMsg msg = new GameMsg {
@@ -49,6 +49,7 @@ public class BattleSys: SystemRoot {
             netSvc.SendMsg(msg);
 
         } else {
+            GameRoot.AddTips("You fail it");
             SetBattleEndWndState(BattleEndType.Lose);
         }
     }
