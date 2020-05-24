@@ -93,9 +93,35 @@ public class MissionSys {
         if(data.isWin) {
             if(data.costtime > 0 && data.resthp > 0) {
                 // recording battel id to get the according reward
+                MapCfg rd = cfgSvc.GetMapCfg(data.bid);
+                PlayerData pd = cacheSvc.GetPlayerDataBySession(pack.session);
+                pd.coin += rd.coin;
+                pd.critical += rd.crystal;
+                PECommon.CalcExp(pd, rd.exp);
+                if(pd.mission == data.bid) {
+                    // check this mission whether the first passed mission
+                    pd.mission += 1;
+                }
+                if(!cacheSvc.UpdatePlayerData(pd.id,pd)) {
+                    msg.err = (int)ErrorCode.UpdateDBError;
+                } else {
+                    RspMissionEnd rspMissionEnd = new RspMissionEnd {
+                        isWin = data.isWin,
+                        bid = data.bid,
+                        resthp = data.resthp,
+                        costtime = data.costtime,
+                        coin = pd.coin,
+                        lv = pd.lv,
+                        exp = pd.exp,
+                        crystal = pd.crystal,
+                        afterBid = pd.mission
+                    };
+                    msg.rspMissionEnd = rspMissionEnd;
+                }
             }
         } else {
             msg.err = (int)ErrorCode.ClientDataError;
         }
+        pack.session.SendMsg(msg);
     }
 }
