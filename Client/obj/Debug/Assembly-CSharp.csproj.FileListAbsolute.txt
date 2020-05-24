@@ -406,3 +406,5 @@ G:\CODE\Unity\RPG_GoldFight\Client\obj\Debug\Assembly-CSharp.csproj.CoreCompileI
 G:\CODE\Unity\RPG_GoldFight\Client\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 G:\CODE\Unity\RPG_GoldFight\Client\obj\Debug\Assembly-CSharp.dll
 G:\CODE\Unity\RPG_GoldFight\Client\obj\Debug\Assembly-CSharp.pdb
+G:\CODE\Unity\RPG_GoldFight\Client\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+G:\CODE\Unity\RPG_GoldFight\Client\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

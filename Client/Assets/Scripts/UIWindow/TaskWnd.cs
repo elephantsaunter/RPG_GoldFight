@@ -43,7 +43,7 @@ public class TaskWnd : WindowRoot{
 			Destroy(scrollTrans.GetChild(i).gameObject);
 		}
 
-		for(int i = 0;i<trdLst.Count;i++) {
+		for(int i = 0;i < trdLst.Count;i++) {
 			GameObject go = resSvc.LoadPrefab(PathDefine.TaskItemPrefab);
 			go.transform.SetParent(scrollTrans);
 			go.transform.localPosition = Vector3.zero;
