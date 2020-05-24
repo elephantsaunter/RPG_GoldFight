@@ -84,4 +84,18 @@ public class MissionSys {
         }
         pack.session.SendMsg(msg);
     }
+    public void ReqMissionEnd(MsgPack pack) {
+        ReqMissionEnd data = pack.msg.reqMissionEnd;
+        GameMsg msg = new GameMsg {
+            cmd = (int)CMD.RspMissionEnd
+        };
+        // check the fight whether legal
+        if(data.isWin) {
+            if(data.costtime > 0 && data.resthp > 0) {
+                // recording battel id to get the according reward
+            }
+        } else {
+            msg.err = (int)ErrorCode.ClientDataError;
+        }
+    }
 }

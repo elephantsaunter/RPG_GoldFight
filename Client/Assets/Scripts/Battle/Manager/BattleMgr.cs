@@ -1,4 +1,5 @@
 using PEProtocol;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class BattleMgr: MonoBehaviour {
     private MapCfg mapCfg;
 
     private Dictionary<string, EntityMonster> monsterDic = new Dictionary<string, EntityMonster>();
-    public void Init (int mapid) {
+    public void Init (int mapid, Action cb = null) {
         resSvc = ResSvc.Instance;
         audioSvc = AudioSvc.Instance;
         // Initialize all manager
@@ -40,6 +41,9 @@ public class BattleMgr: MonoBehaviour {
             // activalization first batch monster
             ActiveCurrrentBatchMonster();
             audioSvc.PlayBGMusic(Constants.BGLeipzig);
+            if(cb != null) {
+                cb();
+            }
         });
     }
     public bool triggerCheck = true;
@@ -63,6 +67,8 @@ public class BattleMgr: MonoBehaviour {
         }
     }
     public void EndBattle (int restHP) {
+        // after death pause AI-logic
+        isPauseGame = true;
         bool isWin = true;
         if(restHP == 0) {
             isWin = false;

@@ -76,6 +76,9 @@ public class NetSvc {
             case CMD.ReqBuyWithCoin:
                 MissionSys.Instance.ReqBuyWithCoin(pack);
                 break;
+            case CMD.ReqMissionEnd:
+                MissionSys.Instance.ReqMissionEnd(pack);
+                break;
         }
     }
 }

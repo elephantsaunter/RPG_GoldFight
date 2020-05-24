@@ -17,3 +17,9 @@ G:\CODE\Unity\Game\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CoreCompileInpu
 G:\CODE\Unity\Game\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CopyComplete
 G:\CODE\Unity\Game\Server\PEProtocol\obj\Debug\PEProtocol.dll
 G:\CODE\Unity\Game\Server\PEProtocol\obj\Debug\PEProtocol.pdb
+G:\CODE\Unity\RPG_GoldFight\Client\Assets\Scripts\Net\PEProtocol.dll
+G:\CODE\Unity\RPG_GoldFight\Client\Assets\Scripts\Net\PEProtocol.pdb
+G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CoreCompileInputs.cache
+G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CopyComplete
+G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.dll
+G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.pdb

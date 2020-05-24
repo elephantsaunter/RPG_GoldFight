@@ -25,6 +25,8 @@ namespace PEProtocol {
         public RspMission rspMission;
         public ReqBuyWithCoin reqBuyWithCoin;
         public RspBuyWithCoin rspBuyWithCoin;
+        public ReqMissionEnd reqMissionEnd;
+        public RspMissionEnd rspMissionEnd;
     }
 
     #region login
@@ -159,6 +161,26 @@ namespace PEProtocol {
         public int fbid;
         public int power;
     }
+    public class ReqMissionEnd {
+        public bool isWin;
+        public int bid; // battle id
+        public int resthp;
+        public int costtime;
+    }
+    [Serializable]
+    public class RspMissionEnd {
+        public bool isWin;
+        public int bid; // battle id
+        public int resthp;
+        public int costtime;
+        // reward
+        public int coin;
+        public int lv;
+        public int exp;
+        public int crystal;
+        public int afterBid;
+
+    }
 
     [Serializable]
     public class ReqBuyWithCoin {
@@ -231,6 +253,8 @@ namespace PEProtocol {
         RspMission = 302,
         ReqBuyWithCoin = 303,
         RspBuyWithCoin = 304,
+        ReqMissionEnd = 305,
+        RspMissionEnd = 306,
     }
 
     public class SrvCfg {

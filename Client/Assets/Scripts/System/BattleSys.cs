@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using PEProtocol;
 using UnityEngine;
 
 public class BattleSys: SystemRoot {
@@ -6,7 +7,8 @@ public class BattleSys: SystemRoot {
     public PlayerCtrlWnd playerCtrlWnd;
     public BattleEndWnd battleEndWnd;
     public BattleMgr battleMgr;
-
+    private int bid; // battle id
+    private double startTime;
 
     public override void InitSys () {
         base.InitSys();
@@ -16,13 +18,16 @@ public class BattleSys: SystemRoot {
     }
 
     public void StartBattle(int mapid) {
+        bid = mapid;
         GameObject go = new GameObject {
             name = "BattleRoot"
         };
 
         go.transform.SetParent(GameRoot.Instance.transform);
         battleMgr = go.AddComponent<BattleMgr>();
-        battleMgr.Init(mapid);
+        battleMgr.Init(mapid, () => {
+            startTime = timerSvc.GetNowTime();
+        });
         SetPlayerCtrlWndState();
     }
     public void EndBattle(int restHP,bool isWin) {
@@ -30,8 +35,19 @@ public class BattleSys: SystemRoot {
         GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
         GameRoot.AddTips("die");
         if (isWin) {
+            double endTime = timerSvc.GetNowTime();
             // win, send end fight request
-            // TODO
+            GameMsg msg = new GameMsg {
+                cmd = (int)CMD.ReqMissionEnd,
+                reqMissionEnd = new ReqMissionEnd {
+                    isWin = isWin,
+                    bid = bid,
+                    resthp = restHP,
+                    costtime = (int)((endTime - startTime) / 1000)
+                }
+            };
+            netSvc.SendMsg(msg);
+
         } else {
             SetBattleEndWndState(BattleEndType.Lose);
         }
