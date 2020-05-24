@@ -136,6 +136,9 @@ public class NetSvc: MonoBehaviour {
             case CMD.RspBuyWithCoin:
                 MissionSys.Instance.RspBuyWithCoin(msg);
                 break;
+            case CMD.RspMissionEnd:
+                BattleSys.Instance.RspMissionEnd(msg);
+                break;
         }
     }
 

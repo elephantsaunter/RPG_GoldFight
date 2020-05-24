@@ -77,6 +77,8 @@ public class Constants {
     public const string UIExtenBtn = "uiExtenBtn";
     public const string UIOpenPage = "uiOpenPage";
     public const string dungeonItemEnter = "fbitem";
+    public const string missionFail = "fblose";
+    public const string LogonEnter = "fbwin";
 
 
     // screen standard width-height-rate

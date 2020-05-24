@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1061461715176080
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,9 +394,8 @@ Animation:
   m_GameObject: {fileID: 1061461715176080}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 34ac351705313b746a14f3dfecd532ab, type: 2}
   m_Animations:
-  - {fileID: 0}
   - {fileID: 7400000, guid: 34ac351705313b746a14f3dfecd532ab, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
@@ -932,6 +931,7 @@ MonoBehaviour:
   txtTime: {fileID: 114232839883136728}
   txtRestHP: {fileID: 114386715614942660}
   txtReward: {fileID: 114409415721670536}
+  ani: {fileID: 111122489219641374}
 --- !u!114 &114784492519922490
 MonoBehaviour:
   m_ObjectHideFlags: 1

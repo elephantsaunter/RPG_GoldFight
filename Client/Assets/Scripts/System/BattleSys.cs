@@ -65,6 +65,12 @@ public class BattleSys: SystemRoot {
         battleEndWnd.SetWndType(endType);
         battleEndWnd.SetWndState(isActive);
     }
+    public void RspMissionEnd(GameMsg msg) {
+        RspMissionEnd data = msg.rspMissionEnd;
+        GameRoot.Instance.SetPlayerDataByMissionEnd(data);
+        battleEndWnd.SetBattleEndData(data.afterBid, data.costtime, data.resthp);
+        SetBattleEndWndState(BattleEndType.Win);
+    }
     public void SetMoveDir (Vector2 dir) {
         battleMgr.SetSelfPlayerMoveDir(dir);
     }

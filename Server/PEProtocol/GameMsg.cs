@@ -161,6 +161,7 @@ namespace PEProtocol {
         public int fbid;
         public int power;
     }
+    [Serializable]
     public class ReqMissionEnd {
         public bool isWin;
         public int bid; // battle id

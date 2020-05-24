@@ -23,7 +23,7 @@
     <resPath>PrefabNPC/MonsterBoss_1</resPath>
     <skillID>301</skillID>
     <atkDis>4.5</atkDis>
-		<hp>8000</hp>
+		<hp>80</hp>
 		<ad>250</ad>
 		<ap>180</ap>
 		<addef>55</addef>

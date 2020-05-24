@@ -117,5 +117,11 @@ public class GameRoot : MonoBehaviour {
     public void SetPlayerDataByMission (RspMission data) {
         PlayerData.power= data.power;
     }
-
+    public void SetPlayerDataByMissionEnd(RspMissionEnd data) {
+        PlayerData.coin = data.coin;
+        PlayerData.exp = data.exp;
+        PlayerData.lv = data.lv;
+        PlayerData.crystal = data.crystal;
+        PlayerData.mission = data.afterBid;
+    }
 }
