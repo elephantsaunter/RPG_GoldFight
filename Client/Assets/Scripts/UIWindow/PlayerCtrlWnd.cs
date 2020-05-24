@@ -110,16 +110,16 @@ public class PlayerCtrlWnd : WindowRoot {
     }
     private void Update() {
         // TEST
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.Keypad0)) {
             ClickNormalAtk();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        if (Input.GetKeyDown(KeyCode.Keypad1)) {
             ClickSkill1();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        if (Input.GetKeyDown(KeyCode.Keypad2)) {
             ClickSkill2();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        if (Input.GetKeyDown(KeyCode.Keypad3)) {
             ClickSkill3();
         }
         float delta = Time.deltaTime;
