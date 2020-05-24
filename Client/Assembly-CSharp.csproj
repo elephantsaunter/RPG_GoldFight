@@ -97,6 +97,7 @@
      <Compile Include="Assets\Scripts\UIWindow\BuyWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\ChatWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\CreateWnd.cs" />
+     <Compile Include="Assets\Scripts\UIWindow\DialogWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\DynamicWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\GuideWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\InfoWnd.cs" />
@@ -110,6 +111,7 @@
      <Compile Include="Assets\Scripts\UIWindow\PlayerCtrlWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\StrongWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\TaskWnd.cs" />
+     <Compile Include="Assets\Sources\Character\Env\MirrorReflection\MirrorReflection.cs" />
      <None Include="Assets\Resources\OUT_UIResources\Font\BattleFont\BattleFont.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Atlases\ScenePassed\ScenePassed.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Atlases\FightWin\FightWin.txt" />
@@ -119,7 +121,6 @@
      <None Include="Assets\Resources\ResCfgs\monster.xml" />
      <None Include="Assets\Resources\ResCfgs\strong.xml" />
      <None Include="Assets\Rin 3d - Anime Style\ReadMe!.txt" />
-     <None Include="Assets\Rin 3d - Anime Style\Advance Unlit Shader\Advance Unlit.shader" />
      <None Include="Assets\Resources\ResCfgs\rdname.xml" />
      <None Include="Assets\Compond\Shader\MonsterShader.shader" />
      <None Include="Assets\Resources\ResCfgs\taskreward.xml" />
@@ -133,6 +134,7 @@
      <None Include="Assets\Resources\OUT_UIResources\Atlases\RoleInformation\RoleInformation.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Font\Font_4\Font_4.txt" />
      <None Include="Assets\Resources\OUT_UIResources\Font\Font_5\Font_5.txt" />
+     <None Include="Assets\Sources\Character\Env\MirrorReflection\MirrorReflection.shader" />
      <None Include="Assets\Resources\ResCfgs\skillmove.xml" />
      <None Include="Assets\Resources\ResCfgs\guide.xml" />
      <None Include="Assets\Resources\OUT_UIResources\Font\PassFont\FassFont.txt" />
