@@ -28,6 +28,9 @@ public class BattleEndWnd : WindowRoot {
             case BattleEndType.Win:
                 break;
             case BattleEndType.Lose:
+                SetActive(rewardTrans, false);
+                SetActive(btnExit.gameObject);
+                SetActive(btnClose.gameObject,false);
                 break;
         }
     }

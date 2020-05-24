@@ -25,10 +25,11 @@ public class BattleSys: SystemRoot {
         battleMgr.Init(mapid);
         SetPlayerCtrlWndState();
     }
-    public void EndBattle(int restHP) {
+    public void EndBattle(int restHP,bool isWin) {
         playerCtrlWnd.SetWndState(false);
         GameRoot.Instance.dynamicWnd.RmvAllHPInfo();
-        if (restHP > 0) {
+        GameRoot.AddTips("die");
+        if (isWin) {
             // win, send end fight request
             // TODO
         } else {

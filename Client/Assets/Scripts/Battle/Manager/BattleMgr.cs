@@ -62,10 +62,14 @@ public class BattleMgr: MonoBehaviour {
             }
         }
     }
-    public void EndBattle(int restHP) {
+    public void EndBattle (int restHP) {
+        bool isWin = true;
+        if(restHP == 0) {
+            isWin = false;
+        }
         AudioSvc.Instance.StopBGMusic();
         AudioSvc.Instance.StopBGMusic();
-        BattleSys.Instance.EndBattle(restHP);
+        BattleSys.Instance.EndBattle(restHP, isWin);
     }
     private void LoadPlayer(MapCfg mapCfg) {
         GameObject player = resSvc.LoadPrefab(PathDefine.AssissinBattlePlayerPrefab);

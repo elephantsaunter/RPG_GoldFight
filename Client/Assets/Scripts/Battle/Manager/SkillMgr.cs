@@ -124,19 +124,22 @@ public class SkillMgr:MonoBehaviour {
             // target die
             target.Die();
             if(target.entityType == EntityType.Monster) {
+                // Monster die
                 target.battleMgr.RmvMonster(target.Name);
+            } else if (target.entityType == EntityType.Player) {
+                // player die, game over
+                target.battleMgr.EndBattle(0);
+                target.battleMgr.entitySelfPlayer = null;
             }
         }
         else {
+            // player got beaten, hp decrease
             target.HP -= dmgSum;
             if(target.entityState == EntityState.None && target.GetBreakState()) {
                 // state which not be controlled AND can be interrupted
                 target.Hit();
             }
-            else if(target.entityType == EntityType.Player) {
-                target.battleMgr.EndBattle(0);
-                target.battleMgr.entitySelfPlayer = null;
-            }
+            
         }
     }
     private bool InRange(Vector3 from, Vector3 to, float range) {
