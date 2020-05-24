@@ -16,10 +16,10 @@ public class MissionWnd : WindowRoot{
 
     public void RefreshUI() {
         int fbid = pd.mission;
-        for(int i = 0;i<missionBtnArr.Length;i++) {
-            if(i<fbid%10000) {
+        for(int i = 0;i < missionBtnArr.Length;i++) {
+            if(i < fbid % 10000) {
                 SetActive(missionBtnArr[i].gameObject);
-                if(i==fbid%10000-1) {
+                if (i == fbid % 10000 - 1) {
                     pointerTrans.SetParent(missionBtnArr[i].transform);
                     pointerTrans.transform.localPosition = new Vector3(25, 100, 0);
                 }
@@ -42,7 +42,9 @@ public class MissionWnd : WindowRoot{
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
         // check power if satisfied
         int power = resSvc.GetMapCfg(fbid).power;
-        if(power > pd.power) {
+        if(pd.mission == 10006) {
+            GameRoot.AddTips("Congratulatons, you have done all missions");
+        }else if (power > pd.power) {
             GameRoot.AddTips("Power is not enough to start a battle");
         } else {
             // send msg
