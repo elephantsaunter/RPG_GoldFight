@@ -10,6 +10,7 @@
     public void Process (EntityBase entity, params object[] args) {
         entity.SetAction(Constants.ActionDie);
         if(entity.entityType == EntityType.Monster) {
+            entity.GetCC().enabled = false;
             TimerSvc.Instance.AddTimerTask((int tid) => {
                     entity.SetActive(false);
             }, Constants.DieAniLength);

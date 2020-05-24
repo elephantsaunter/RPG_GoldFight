@@ -95,6 +95,8 @@ public class MissionSys {
                 // recording battel id to get the according reward
                 MapCfg rd = cfgSvc.GetMapCfg(data.bid);
                 PlayerData pd = cacheSvc.GetPlayerDataBySession(pack.session);
+                // task progress update
+                TaskSys.Instance.CalcTaskPrgs(pd, 2);
                 pd.coin += rd.coin;
                 pd.critical += rd.crystal;
                 PECommon.CalcExp(pd, rd.exp);

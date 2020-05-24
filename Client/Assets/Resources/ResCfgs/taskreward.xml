@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<item ID="1">
-		<taskName>first task</taskName>
+		<taskName>first simple</taskName>
 		<count>1</count>
 		<exp>1130</exp>
 		<coin>1280</coin>
 	</item>
 	<item ID="2">
-		<taskName>second task</taskName>
+		<taskName>second battle</taskName>
 		<count>3</count>
 		<exp>1200</exp>
 		<coin>1307</coin>
 	</item>
 	<item ID="3">
-		<taskName>third task</taskName>
+		<taskName>third enhancement</taskName>
 		<count>5</count>
 		<exp>1250</exp>
 		<coin>1312</coin>
 	</item>
 	<item ID="4">
-		<taskName>fourth task</taskName>
+		<taskName>fourth buy power</taskName>
 		<count>2</count>
 		<exp>1340</exp>
 		<coin>1425</coin>
 	</item>
 	<item ID="5">
-		<taskName>fifth task</taskName>
+		<taskName>fifth buy coin</taskName>
 		<count>5</count>
 		<exp>1420</exp>
 		<coin>1573</coin>
 	</item>
 	<item ID="6">
-		<taskName>sis task</taskName>
+		<taskName>sis send msg</taskName>
 		<count>3</count>
 		<exp>1560</exp>
 		<coin>1696</coin>
