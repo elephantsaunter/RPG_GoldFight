@@ -117,7 +117,6 @@ public class MainCitySys : SystemRoot {
 	public void RspBuy(GameMsg msg) {
 		RspBuy rspBuy = msg.rspBuy;
 		GameRoot.Instance.SetPlayerDataByBuy(rspBuy);
-		GameRoot.AddTips("Purchased sucessfully");
 		mainCityWnd.RefreshUI();
 		buyWnd.SetWndState(false);
 		if(msg.pshTaskPrgs != null) {

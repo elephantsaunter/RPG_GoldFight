@@ -35,7 +35,6 @@ public class MissionSys :SystemRoot{
     public void RspBuyWithCoin(GameMsg msg) {
         RspBuyWithCoin data = msg.rspBuyWithCoin;
         GameRoot.Instance.SetPlayerDataByBuyWithCoin(data);
-        GameRoot.AddTips("Purchased sucessfully");
         optionWnd.RefreshUI();
         //optionWnd.SetWndState(false);
         //buyWnd.btnSure.interactable = false;

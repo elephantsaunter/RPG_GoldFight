@@ -48,7 +48,7 @@ public class OptionWnd : WindowRoot {
         //Instance = this;
         base.InitWnd();
         pd = GameRoot.Instance.PlayerData;
-        sk1CDTime = 5000 / 1000.0f;
+        sk1CDTime = 2000 / 1000.0f;
         sk2CDTime = 10000 / 1000.0f;
         sk3CDTime = 30000 / 1000.0f;
         sk4CDTime = 60000 / 1000.0f;
@@ -130,12 +130,18 @@ public class OptionWnd : WindowRoot {
     public void ClickBuyCallBtn() {
         if(isSk1CD == false) {
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
-            // send internet msg
+            int result = PETools.RDInt(-50, 50);
+            if(result >= 0) {
+                GameRoot.AddTips("Gluckwunsch! You get " + result + " coin");
+            } else {
+                GameRoot.AddTips("Shade! You lose " + result + " coin");
+            }
+            // send internet msgpur
             GameMsg msg = new GameMsg {
                 cmd = (int)CMD.ReqBuyWithCoin,
                 reqBuyWithCoin = new ReqBuyWithCoin {
                     type = 1,
-                    cost = -50,
+                    cost = -result,
                 }
             };
             netSvc.SendMsg(msg);
@@ -148,6 +154,7 @@ public class OptionWnd : WindowRoot {
     }
     public void ClickBuyPutBtn () {
         if (isSk2CD == false) {
+            GameRoot.AddTips("2");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
@@ -168,6 +175,7 @@ public class OptionWnd : WindowRoot {
     
     public void ClickSellCallBtn () {
         if (isSk3CD == false) {
+            GameRoot.AddTips("3");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
@@ -187,6 +195,7 @@ public class OptionWnd : WindowRoot {
     }
     public void ClickSellPutBtn () {
         if (isSk4CD == false) {
+            GameRoot.AddTips("4");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
