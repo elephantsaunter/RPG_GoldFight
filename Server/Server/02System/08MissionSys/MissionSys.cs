@@ -57,16 +57,16 @@ public class MissionSys {
         if (pd.coin < data.cost) {
             msg.err = (int)ErrorCode.LackCoin;
         } else {
-            pd.coin -= data.cost;
+            
             switch (data.type) {
                 case 0:
-                    pd.coin -= 200;
+                    pd.diamond += data.cost;
                     break;
                 case 1:
-                    //pd.coin += 1000;
-                     break;
+                    pd.coin += data.cost;
+                    break;
                 case 2:
-                    //pd.power += 100;
+                    pd.power += data.cost;
                      break;
                 case 3:
                     //pd.coin += 1000;
@@ -79,6 +79,8 @@ public class MissionSys {
                 msg.rspBuyWithCoin = new RspBuyWithCoin {
                     type = data.type,
                     coin = pd.coin,
+                    diamond = pd.diamond,
+                    power = pd.power
                 };
             }
         }

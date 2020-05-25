@@ -193,6 +193,8 @@ namespace PEProtocol {
     public class RspBuyWithCoin {
         public int type;
         public int coin;
+        public int diamond;
+        public int power;
     }
 
     #endregion

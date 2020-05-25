@@ -23,4 +23,3 @@ G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CoreCo
 G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.csproj.CopyComplete
 G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.dll
 G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.pdb
-G:\CODE\Unity\RPG_GoldFight\Server\PEProtocol\obj\Debug\PEProtocol.csprojAssemblyReference.cache

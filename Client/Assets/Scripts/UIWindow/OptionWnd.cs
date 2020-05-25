@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class OptionWnd : WindowRoot {
     //public static OptionWnd Instance = null;
     public Text txtCoin;
+    public Text txtDiamond;
+    public Text txtPower;
     private PlayerData pd;
 
     #region skill1
@@ -49,9 +51,9 @@ public class OptionWnd : WindowRoot {
         base.InitWnd();
         pd = GameRoot.Instance.PlayerData;
         sk1CDTime = 2000 / 1000.0f;
-        sk2CDTime = 10000 / 1000.0f;
-        sk3CDTime = 30000 / 1000.0f;
-        sk4CDTime = 60000 / 1000.0f;
+        sk2CDTime = 5000 / 1000.0f;
+        sk3CDTime = 5000 / 1000.0f;
+        sk4CDTime = 30000 / 1000.0f;
         RefreshUI();
     }
     private void Update() {
@@ -115,6 +117,7 @@ public class OptionWnd : WindowRoot {
             }
             // every second do a refresh in txtSk1CD
             sk4NumCount += delta;
+            RefreshUI();
         }
     }
     public void ClickCloseWnd() {
@@ -125,9 +128,11 @@ public class OptionWnd : WindowRoot {
     public void RefreshUI() {
         pd = GameRoot.Instance.PlayerData;
         SetText(txtCoin, pd.coin);
+        SetText(txtDiamond, pd.diamond);
+        SetText(txtPower, "Power " + pd.power + "/150");
     }
 
-    public void ClickBuyCallBtn() {
+    public void ClickFirstlBtn() {
         if(isSk1CD == false) {
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             int result = PETools.RDInt(-50, 50);
@@ -141,7 +146,7 @@ public class OptionWnd : WindowRoot {
                 cmd = (int)CMD.ReqBuyWithCoin,
                 reqBuyWithCoin = new ReqBuyWithCoin {
                     type = 1,
-                    cost = -result,
+                    cost = result,
                 }
             };
             netSvc.SendMsg(msg);
@@ -152,16 +157,16 @@ public class OptionWnd : WindowRoot {
             RefreshUI();
         }
     }
-    public void ClickBuyPutBtn () {
+    public void ClickSecondBtn () {
         if (isSk2CD == false) {
-            GameRoot.AddTips("2");
+            GameRoot.AddTips("You get 100 coins");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
                 cmd = (int)CMD.ReqBuyWithCoin,
                 reqBuyWithCoin = new ReqBuyWithCoin {
                     type = 1,
-                    cost = -100,
+                    cost = 100,
                 }
             };
             netSvc.SendMsg(msg);
@@ -173,16 +178,16 @@ public class OptionWnd : WindowRoot {
         }
     }
     
-    public void ClickSellCallBtn () {
+    public void ClickThirdBtn () {
         if (isSk3CD == false) {
-            GameRoot.AddTips("3");
+            GameRoot.AddTips("Take a rest");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
                 cmd = (int)CMD.ReqBuyWithCoin,
                 reqBuyWithCoin = new ReqBuyWithCoin {
-                    type = 1,
-                    cost = -300,
+                    type = 2,
+                    cost = 1,
                 }
             };
             netSvc.SendMsg(msg);
@@ -193,16 +198,16 @@ public class OptionWnd : WindowRoot {
             RefreshUI();
         }
     }
-    public void ClickSellPutBtn () {
+    public void ClickFourthBtn () {
         if (isSk4CD == false) {
-            GameRoot.AddTips("4");
+            GameRoot.AddTips("You get 2 diamonds!");
             audioSvc.PlayUIAudio(Constants.UIClickBtn);
             // send internet msg
             GameMsg msg = new GameMsg {
                 cmd = (int)CMD.ReqBuyWithCoin,
                 reqBuyWithCoin = new ReqBuyWithCoin {
-                    type = 1,
-                    cost = 600,
+                    type = 0,
+                    cost = 2,
                 }
             };
             netSvc.SendMsg(msg);
