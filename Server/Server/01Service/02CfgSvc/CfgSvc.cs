@@ -27,7 +27,7 @@ public class CfgSvc {
     private void InitGuideCfg () {
         XmlDocument doc = new XmlDocument();
         //doc.LoadXml(xml.text);
-        doc.Load(@"G:\CODE\Unity\Game\Client\Assets\Resources\ResCfgs\guide.xml");
+        doc.Load(@"G:\CODE\Unity\RPG_GoldFight\Client\Assets\Resources\ResCfgs\guide.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -68,7 +68,7 @@ public class CfgSvc {
     private void InitTaskRewardCfg () {
         XmlDocument doc = new XmlDocument();
         //doc.LoadXml(xml.text);
-        doc.Load(@"G:\CODE\Unity\Game\Client\Assets\Resources\ResCfgs\taskreward.xml");
+        doc.Load(@"G:\CODE\Unity\RPG_GoldFight\Client\Assets\Resources\ResCfgs\taskreward.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -112,7 +112,7 @@ public class CfgSvc {
     private void InitMapCfg () {
         XmlDocument doc = new XmlDocument();
         //doc.LoadXml(xml.text);
-        doc.Load(@"G:\CODE\Unity\Game\Client\Assets\Resources\ResCfgs\map.xml");
+        doc.Load(@"G:\CODE\Unity\RPG_GoldFight\Client\Assets\Resources\ResCfgs\map.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
@@ -160,7 +160,7 @@ public class CfgSvc {
     private void InitStrongCfg () {
         XmlDocument doc = new XmlDocument();
         //doc.LoadXml(xml.text);
-        doc.Load(@"G:\CODE\Unity\Game\Client\Assets\Resources\ResCfgs\strong.xml");
+        doc.Load(@"G:\CODE\Unity\RPG_GoldFight\Client\Assets\Resources\ResCfgs\strong.xml");
 
         XmlNodeList nodLst = doc.SelectSingleNode("root").ChildNodes;
 
