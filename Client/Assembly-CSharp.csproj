@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\UIWindow\OptionWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\PlayerCtrlWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\StrongWnd.cs" />
+     <Compile Include="Assets\Scripts\UIWindow\SWEWnd.cs" />
      <Compile Include="Assets\Scripts\UIWindow\TaskWnd.cs" />
      <Compile Include="Assets\Sources\Character\Env\MirrorReflection\MirrorReflection.cs" />
      <None Include="Assets\Resources\OUT_UIResources\Font\BattleFont\BattleFont.txt" />

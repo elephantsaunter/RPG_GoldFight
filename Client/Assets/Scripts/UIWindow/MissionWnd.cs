@@ -42,7 +42,7 @@ public class MissionWnd : WindowRoot{
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
         // check power if satisfied
         int power = resSvc.GetMapCfg(fbid).power;
-        if(pd.mission == 10006) {
+        if(pd.mission == 10009) {
             GameRoot.AddTips("Congratulatons, you have done all missions");
         }else if (power > pd.power) {
             GameRoot.AddTips("Power is not enough to start a battle");

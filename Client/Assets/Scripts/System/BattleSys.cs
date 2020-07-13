@@ -6,6 +6,7 @@ public class BattleSys: SystemRoot {
     public static BattleSys Instance = null;
     public PlayerCtrlWnd playerCtrlWnd;
     public BattleEndWnd battleEndWnd;
+    public SWEWnd sweWnd;
     public BattleMgr battleMgr;
     private int bid; // battle id
     private double startTime;
@@ -63,13 +64,16 @@ public class BattleSys: SystemRoot {
         playerCtrlWnd.SetWndState(isActive);
     }
     public void SetBattleEndWndState(BattleEndType endType, bool isActive = true) {
+        
         battleEndWnd.SetWndType(endType);
         battleEndWnd.SetWndState(isActive);
+        // sweWnd.SetWndState(isActive);
     }
     public void RspMissionEnd(GameMsg msg) {
         RspMissionEnd data = msg.rspMissionEnd;
         GameRoot.Instance.SetPlayerDataByMissionEnd(data);
         battleEndWnd.SetBattleEndData(data.afterBid, data.costtime, data.resthp);
+        
         SetBattleEndWndState(BattleEndType.Win);
     }
     public void SetMoveDir (Vector2 dir) {

@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PEProtocol;
 
 public class BattleEndWnd : WindowRoot {
     #region UI Define
     public Transform rewardTrans;
+    public Transform sweobject;
     public Button btnClose;
     public Button btnExit;
     public Button btnSure;
-    public Text txtTime;
-    public Text txtRestHP;
-    public Text txtReward;
     public Animation ani;
+
+    // This part for SWE Project show
+    public Text txtFrage;
+    public Text txtContent1;
+    public Text txtContent2;
+    public Text txtContent3;
+    public Text txtDiamond;
+    public Text txtPower;
+    private PlayerData pd;
+
     #endregion
     private BattleEndType endType = BattleEndType.None;
     protected override void InitWnd () {
@@ -22,12 +31,14 @@ public class BattleEndWnd : WindowRoot {
     private void RefreshUI() {
         switch(endType) {
             case BattleEndType.Pause:
+                SetActive(sweobject, false);
                 SetActive(rewardTrans, false);
                 SetActive(btnExit.gameObject);
                 SetActive(btnClose.gameObject);
                 break;
             case BattleEndType.Win:
-                SetActive(rewardTrans, false);
+                SetActive(sweobject, true);
+                SetActive(rewardTrans, true);
                 SetActive(btnExit.gameObject,false);
                 SetActive(btnClose.gameObject,false);
                 MapCfg cfg = resSvc.GetMapCfg(bid);
@@ -37,6 +48,46 @@ public class BattleEndWnd : WindowRoot {
                 int exp = cfg.exp;
                 int crystal = cfg.crystal;
 
+                pd = GameRoot.Instance.PlayerData;
+                if (pd.mission == 10002) {
+                    SetText(txtFrage, "Level 1: Voruntersuchung");
+                    SetText(txtContent1, "Was ist drei Aufgaben in Level 1");
+                    SetText(txtContent2, "A.Persona, Rahmenbedingungen und User Needs");
+                    SetText(txtContent3, "B.V-Model, Wasserfall und XP");
+                } else if (pd.mission == 10003) {
+                    SetText(txtFrage, "Level 2: Analyse");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10004) {
+                    SetText(txtFrage, "Level 3: Design");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10005) {
+                    SetText(txtFrage, "Level 4: Implementierung");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10006) {
+                    SetText(txtFrage, "Level 5: Test");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10007) {
+                    SetText(txtFrage, "Level 6: Inbetriebnahme");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10008) {
+                    SetText(txtFrage, "Level 7: Wartung");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else if (pd.mission == 10009) {
+                    SetText(txtFrage, "Level 8: Migration ");
+                    SetText(txtContent1, "Level 1: Voruntersuchung");
+
+                } else {
+                    SetText(txtFrage, "xxx ");
+                    SetText(txtContent1, "xxx");
+                }
+
+                /** This part is battle end part
                 SetText(txtTime, "Time: " + min + " min: " + sec + "secs");
                 SetText(txtRestHP, "RestHP: " + resthp);
                 SetText(txtReward, "Reward: " + Constants.Color(coin+"coin",TxtColor.Green) + " exp: " + exp + "crystal: " + crystal);
@@ -56,9 +107,11 @@ public class BattleEndWnd : WindowRoot {
                         }, 650);
                     }, 650);
                 }, 1000);
+                **/
                 break;
             case BattleEndType.Lose:
                 SetActive(rewardTrans, false);
+                SetActive(sweobject, false);
                 SetActive(btnExit.gameObject);
                 SetActive(btnClose.gameObject,false);
                 audioSvc.PlayUIAudio(Constants.missionFail);
@@ -76,12 +129,19 @@ public class BattleEndWnd : WindowRoot {
         MainCitySys.Instance.EnterMainCity();
         BattleSys.Instance.DestroyBattle();
     }
-    public void ClickSureBtn() {
+    public void ClickSureBtn () {
         audioSvc.PlayUIAudio(Constants.UIClickBtn);
         // enter city and win and open battle display to select next battle
+        GameRoot.AddTips("Prima, Korrekte Antwort");
         MainCitySys.Instance.EnterMainCity();
         BattleSys.Instance.DestroyBattle();
         MissionSys.Instance.EnterMission();
+    }
+
+    public void ClickWrongBtn () {
+        audioSvc.PlayUIAudio(Constants.UIClickBtn);
+        // enter city and win and open battle display to select next battle
+        GameRoot.AddTips("Sie haben falsch beantwortet");
     }
     public void SetWndType(BattleEndType endType) {
         this.endType = endType;
