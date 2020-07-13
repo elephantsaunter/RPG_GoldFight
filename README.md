@@ -9,13 +9,11 @@ The 3d-object and scene matrials is from the Internet.
 
 login 
 
-
-
-![a1](show_pics\a1.png)
+<img src="show_pics\a1.png" alt="1" style="zoom:20%;" />
 
 Create Character
 
-![a1](show_pics\a2.png)
+<img src="show_pics\a2.png" alt="1" style="zoom:20%;" />
 
 
 
