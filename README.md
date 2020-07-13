@@ -19,47 +19,51 @@ Create Character
 
 Game Map
 
-![a1](show_pics\a3.png)
+<img src="show_pics\a3.png" alt="1" style="zoom:20%;" />
 
 Purchase Window
 
-![a1](show_pics\a4.png)
+<img src="show_pics\a4.png" alt="1" style="zoom:20%;" />
+
+Task System
+
+<img src="show_pics\a5.png" alt="1" style="zoom:20%;" />
 
 Dialog with NPCs
 
-![a1](show_pics\a6.png)
+<img src="show_pics\a6.png" alt="1" style="zoom:20%;" />
 
 invest options
 
-![a1](show_pics\a7.png)
+<img src="show_pics\a7.png" alt="1" style="zoom:20%;" />
 
 work for living and do some gambling
 
-![a1](show_pics\a8.png)
+<img src="show_pics\a8.png" alt="1" style="zoom:20%;" />
 
 chat with other Player
 
-![a1](show_pics\a9.png)
+<img src="show_pics\a9.png" alt="1" style="zoom:20%;" />
 
 you can enhance your equipment
 
-![a1](show_pics\a10.png)
+<img src="show_pics\a10.png" alt="1" style="zoom:20%;" />
 
 show your role's infos
 
-![a1](show_pics\a11.png)
+<img src="show_pics\a11.png" alt="1" style="zoom:20%;" />
 
 more infos....
 
-![a1](show_pics\a12.png)
+<img src="show_pics\a12.png" alt="1" style="zoom:20%;" />
 
 fight aginst Monster!!!!!
 
-![a1](show_pics\a13.png)
+<img src="show_pics\a13.png" alt="1" style="zoom:20%;" />
 
 the fight mission system (Dungeon)
 
-![a1](show_pics\a14.png)
+<img src="show_pics\a14.png" alt="1" style="zoom:20%;" />
 
 
 
