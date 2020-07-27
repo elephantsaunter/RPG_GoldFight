@@ -6,7 +6,6 @@ public class BattleSys: SystemRoot {
     public static BattleSys Instance = null;
     public PlayerCtrlWnd playerCtrlWnd;
     public BattleEndWnd battleEndWnd;
-    public SWEWnd sweWnd;
     public BattleMgr battleMgr;
     private int bid; // battle id
     private double startTime;

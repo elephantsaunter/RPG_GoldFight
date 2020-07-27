@@ -7,6 +7,12 @@ The 3d-object and scene matrials is from the Internet.
 
 #### The Project:
 
+<img src="show_pics\b1.png" alt="1" style="zoom:20%;" />
+
+<img src="show_pics\b2.png" alt="1" style="zoom:20%;" />
+
+#### The Show:
+
 login 
 
 <img src="show_pics\a1.png" alt="1" style="zoom:20%;" />
@@ -65,9 +71,21 @@ the fight mission system (Dungeon)
 
 <img src="show_pics\a14.png" alt="1" style="zoom:20%;" />
 
+Structures of the Game
 
+<img src="show_pics\stu\a1.png" alt="1" style="zoom:20%;" />
 
+<img src="show_pics\stu\a11.png" alt="1" style="zoom:20%;" />
 
+<img src="show_pics\stu\a12.png" alt="1" style="zoom:20%;" />
+
+<img src="show_pics\stu\a13.png" alt="1" style="zoom:20%;" />
+
+<img src="show_pics\stu\a14.png" alt="1" style="zoom:20%;" />
+
+<img src="show_pics\stu\a15.png" alt="1" style="zoom:20%;" />
+
+<img src="show_pics\stu\a2.png" alt="1" style="zoom:20%;" />
 
 
 

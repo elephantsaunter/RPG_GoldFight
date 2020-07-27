@@ -9,6 +9,10 @@ public class MapMgr: MonoBehaviour {
         // init first wave monster
         battleMgr.LoadMonsterByWaveID(waveIndex);
         PECommon.Log("Init MapMgr Done");
+        // BattleSys.Instance.battleMgr.isPauseGame = true;
+        // BattleSys.Instance.SetBattleEndWndState(BattleEndType.Info);
+        // sweWnd.SetWndState();
+
     }
     public void TriggerMonsterBorn(TriggerData trigger, int waveIndex) {
         if(battleMgr != null) {
@@ -21,7 +25,7 @@ public class MapMgr: MonoBehaviour {
     }
     public bool SetNextTriggerOn() {
         waveIndex += 1;
-        if(waveIndex < 4) {
+        if (waveIndex < 4) {
             GameRoot.AddTips("You can enter the Nr." + waveIndex + " wave now!");
         }
         for(int i = 0; i < triggerArr.Length; i++) {
@@ -32,5 +36,13 @@ public class MapMgr: MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void ShowIntro() {
+        
+    }
+
+    public void ShowDetail() {
+
     }
 }
